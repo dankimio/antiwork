@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  data: function () {
+  data: function() {
     return {
-      message: "Hello Vue!"
+      message: 'Hello Vue!'
     }
   }
 }
@@ -16,6 +16,8 @@ export default {
 
 <style scoped>
 p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2em;
   text-align: center;
 }
