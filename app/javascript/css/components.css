@@ -7,9 +7,39 @@
 }
 
 .field {
-  @apply border-2 px-5 py-3 w-full max-w-lg text-lg border-gray-200;
+  @apply border-2 px-5 py-3 w-full text-lg border-gray-200;
 
   &:focus {
     @apply border-gray-400;
+  }
+}
+
+.dropdown-link {
+  & .dropdown-arrow {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    & .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    & .dropdown-content {
+      @apply block;
+    }
+  }
+}
+
+.dropdown-list {
+  & .dropdown-list-item {
+    @apply flex px-4 py-2 border-b border-gray-200 cursor-pointer;
+
+    &:last-child {
+      @apply border-none;
+    }
+
+    &:hover {
+      @apply bg-gray-100;
+    }
   }
 }
