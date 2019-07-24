@@ -5,3 +5,11 @@
     @apply bg-black;
   }
 }
+
+.field {
+  @apply border-2 px-5 py-3 w-full max-w-lg text-lg border-gray-200;
+
+  &:focus {
+    @apply border-gray-400;
+  }
+}
