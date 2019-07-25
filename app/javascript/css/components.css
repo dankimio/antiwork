@@ -2,7 +2,7 @@
   @apply inline-flex items-center text-white bg-gray-900 py-2 px-5 uppercase tracking-wide font-semibold;
 
   &:hover {
-    @apply bg-black;
+    @apply bg-black .shadow-lg;
   }
 }
 
