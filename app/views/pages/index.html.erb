@@ -11,7 +11,7 @@
 <div class="px-4 lg:px-0 max-w-lg mx-auto">
   <input type="text" class="field mb-3" placeholder="Please enter query…">
 
-  <div class="flex">
+  <div class="flex mb-1">
     <div class="dropdown-link mr-6 text-gray-600">
       Category
 
@@ -84,14 +84,22 @@
   </div>
 
   <%- 5.times do %>
-  <div class="py-4">
-    <div class="mb-1">
+  <div class="py-5">
+    <div class="mb-2">
       <a href="#" class="text-xl lg:text-2xl font-semibold text-grey-800 border-b-4 hover:border-gray-900 mr-1">Ruby on Rails developer</a>
       <span class="text-gray-600 lg:text-lg mr-1">at</span>
       <span class="text-lg lg:text-xl">Frogogo</span>
     </div>
-    <p class="text-gray-700">$72k-105k | Software development</p>
+    <p class="mb-3 text-gray-700">$72k-105k | Software development</p>
+    <div class="flex">
+      <span class="border px-3 mr-2 text-xs md:text-sm uppercase border-gray-400 tracking-wide text-gray-600">
+        Remote
+      </span>
+      <span class="border px-3 mr-2 text-xs md:text-sm uppercase border-gray-400 tracking-wide text-gray-600">
+        Visa sponsorship
+      </span>
+    </div>
   </div>
-  <hr class="border-b-2 border-gray-200">
+  <hr class="border-b-2 border-gray-200 mb-0">
   <%- end %>
 </div>
