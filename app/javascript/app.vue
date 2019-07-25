@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <div class="container py-4">
+      <p>{{ message }}</p>
+    </div>
   </div>
 </template>
 
