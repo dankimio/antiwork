@@ -43,3 +43,11 @@
     }
   }
 }
+
+.tag {
+  @apply border px-3 text-xs uppercase border-gray-400 tracking-wide text-gray-600;
+}
+
+@screen lg {
+  @apply text-sm;
+}
