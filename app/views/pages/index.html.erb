@@ -83,23 +83,38 @@
     </div>
   </div>
 
-  <%- 5.times do %>
+  <% @jobs.each_with_index do |job, index| %>
   <div class="py-5">
     <div class="mb-2">
-      <a href="#" class="text-xl lg:text-2xl font-semibold text-grey-800 border-b-4 hover:border-gray-900 mr-1">Ruby on Rails developer</a>
+      <a href="#" class="text-xl lg:text-2xl font-semibold text-grey-800 border-b-4 hover:border-gray-900 mr-1">
+        <%= job[:title] %>
+      </a>
       <span class="text-gray-600 lg:text-lg mr-1">at</span>
-      <span class="text-lg lg:text-xl">Frogogo</span>
+      <span class="text-lg lg:text-xl">
+        <%= job[:company] %>
+      </span>
     </div>
-    <p class="mb-3 text-gray-700">$72k-105k | Software development</p>
+    <p class="mb-3 text-gray-700">
+      <%= job[:salary] %> | <%= job[:category] %>
+    </p>
     <div class="flex">
+      <span class="tag mr-2">
+        <%= job[:location] %>
+      </span>
+
+      <% if index % 3 == 0 %>
       <span class="tag mr-2">
         Remote
       </span>
+      <% end %>
+
+      <% if index % 2 == 0 %>
       <span class="tag mr-2">
         Visa sponsorship
       </span>
+      <% end %>
     </div>
   </div>
   <hr class="border-b-2 border-gray-200 mb-0">
-  <%- end %>
+  <% end %>
 </div>
