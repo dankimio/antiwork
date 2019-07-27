@@ -62,7 +62,9 @@
           </div>
           <div class="dropdown-list-item">
             <span class="flex-1">Berlin</span>
-            <span class="ml-2">👌</span>
+            <span class="ml-2">
+              <%= image_tag 'checkmark.svg', class: 'injectable w-4 text-gray-600 fill-current' %>
+            </span>
           </div>
           <div class="dropdown-list-item">
             <span class="flex-1">Sydney</span>
@@ -89,21 +91,26 @@
       </span>
     </div>
     <p class="mb-3 text-gray-700">
-      <%= job[:salary] %> | <%= job[:category] %>
+      <%= job[:salary] %>
+      <span class="text-gray-500">|</span>
+      <%= job[:category] %>
     </p>
     <div class="flex">
       <span class="tag mr-2">
+        <%= image_tag 'pin.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
         <%= job[:location] %>
       </span>
 
       <% if index % 3 == 0 %>
       <span class="tag mr-2">
+        <%= image_tag 'globe.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
         Remote
       </span>
       <% end %>
 
       <% if index % 2 == 0 %>
       <span class="tag mr-2">
+        <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
         Visa sponsorship
       </span>
       <% end %>
