@@ -35,6 +35,8 @@ a.underlined-black {
 .field {
   @apply border-2 px-5 py-3 w-full text-lg border-gray-200;
 
+  transition: all .25s;
+
   &:focus {
     @apply border-gray-400;
   }
