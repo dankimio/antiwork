@@ -680,6 +680,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@iconfu/svg-inject@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@iconfu/svg-inject/-/svg-inject-1.2.3.tgz#17ab680b382859e6121cf523cd3879bf15c88732"
+  integrity sha512-3v1MUAJqmJS4jmhHoCkSxt+EdJrjPHlLXrWocCT25kCxnxJto8028Z6CC406EL11KA53SDZgI/QQA5GEJAoiRw==
+
 "@rails/actioncable@^6.0.0-alpha":
   version "6.0.0-alpha"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.0-alpha.tgz#84be50626a43fe431789243c6b13c14f922bf048"
