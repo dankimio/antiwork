@@ -35,6 +35,9 @@ a.underlined-black {
 .field {
   @apply border-2 px-5 py-3 w-full text-lg border-gray-200;
 
+  /* Firefox fix */
+  @apply min-w-0;
+
   transition: all .25s;
 
   &:focus {
