@@ -25,6 +25,8 @@ a.underlined-black {
 .button {
   @apply inline-flex items-center text-white bg-gray-900 py-2 px-5 uppercase tracking-wide font-semibold;
 
+  transition: all .25s;
+
   &:hover {
     @apply bg-black .shadow-lg;
   }
