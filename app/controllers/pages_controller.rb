@@ -8,4 +8,7 @@ class PagesController < ApplicationController
       { title: 'Project manager', company: 'Uber', salary: '$75k–100k', category: 'Management', location: 'Sydney' },
     ]
   end
+
+  def new
+  end
 end

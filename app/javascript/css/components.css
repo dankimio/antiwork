@@ -45,6 +45,11 @@ a.underlined-black {
   }
 }
 
+input[type=checkbox]:checked:after {
+  @apply bg-gray-800 block w-full h-full border-4 border-white;
+  content: "";
+}
+
 .dropdown-link {
   @apply bg-white;
   & .dropdown-arrow {
