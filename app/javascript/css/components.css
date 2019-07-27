@@ -2,8 +2,7 @@ a.underlined {
   @apply relative border-b-4 border-transparent;
 
   &::after {
-    @apply absolute block h-1 w-0;
-
+    @apply absolute block h-1 w-0 left-0;
     content: '';
     bottom: -4px;
     transition: width .25s;
