@@ -39,6 +39,7 @@ a.underlined-black {
 }
 
 .dropdown-link {
+  @apply bg-white;
   & .dropdown-arrow {
     transition: all 0.3s ease-in-out;
   }
@@ -49,12 +50,13 @@ a.underlined-black {
     }
 
     & .dropdown-content {
-      @apply block;
+      @apply block z-10;
     }
   }
 }
 
 .dropdown-list {
+  @apply bg-white;
   & .dropdown-list-item {
     @apply flex px-4 py-2 border-b border-gray-200 cursor-pointer bg-white items-center;
 
