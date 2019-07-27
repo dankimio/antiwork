@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="container py-4">
-      <p>{{ message }}</p>
+    <div class="container text-center mb-10">
+      <p class="text-gray-600">{{ message }}</p>
     </div>
   </div>
 </template>
