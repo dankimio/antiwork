@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get 'new-post', to: 'pages#new'
+  get 'new-advert', to: 'pages#new'
+  get 'job-description', to: 'pages#job_description'
+  get 'company-info', to: 'pages#company_info'
+  get 'payment', to: 'pages#payment'
 end

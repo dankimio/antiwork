@@ -11,4 +11,7 @@ class PagesController < ApplicationController
 
   def new
   end
+
+  def job_description
+  end
 end
