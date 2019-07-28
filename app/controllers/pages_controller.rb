@@ -14,4 +14,7 @@ class PagesController < ApplicationController
 
   def job_description
   end
+
+  def company_info
+  end
 end
