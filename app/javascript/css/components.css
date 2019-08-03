@@ -1,3 +1,42 @@
+/* Typography */
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  @apply font-semibold text-gray-900;
+}
+
+.heading-1 {
+  @apply text-3xl;
+}
+
+.heading-2 {
+  @apply text-2xl;
+}
+
+.heading-3 {
+  @apply text-xl;
+}
+
+@screen lg {
+  .heading-1 {
+    @apply text-4xl;
+  }
+
+  .heading-2 {
+    @apply text-3xl;
+  }
+
+  .heading-3 {
+    @apply text-2xl;
+  }
+}
+
+/* Links */
+
 a.underlined {
   @apply relative border-b-4 border-transparent;
 
@@ -21,6 +60,8 @@ a.underlined-black {
   }
 }
 
+/* Buttons */
+
 .button {
   @apply inline-flex items-center text-white bg-gray-900 py-2 px-5 uppercase tracking-wide font-semibold;
 
@@ -30,6 +71,8 @@ a.underlined-black {
     @apply bg-black .shadow-lg;
   }
 }
+
+/* Inputs */
 
 .field {
   @apply border-2 px-5 py-3 w-full text-lg border-gray-200;
@@ -48,6 +91,8 @@ input[type=checkbox]:checked:after {
   @apply bg-gray-800 block w-full h-full border-4 border-white;
   content: "";
 }
+
+/* Dropdowns */
 
 .dropdown-link {
   @apply bg-white;
@@ -80,6 +125,8 @@ input[type=checkbox]:checked:after {
     }
   }
 }
+
+/* Tags */
 
 .tag {
   @apply flex items-center border px-3 text-xs uppercase border-gray-400 tracking-wide text-gray-600;
