@@ -10,7 +10,7 @@
 export default {
   data: function() {
     return {
-      message: 'Hello Vue!'
+      message: '© 2019 Antiwork'
     }
   }
 }
