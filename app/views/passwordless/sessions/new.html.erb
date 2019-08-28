@@ -1,0 +1,20 @@
+<div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
+  <h1 class="heading-1">Sign in</h1>
+
+  <div class="w-12 h-1 bg-gray-800 mb-8"></div>
+
+  <%= form_for @session, url: send(Passwordless.mounted_as).sign_in_path do |f| %>
+    <% email_field_name = :"passwordless[#{@email_field}]" %>
+
+    <%= text_field_tag email_field_name,
+                       params.fetch(email_field_name, nil),
+                       placeholder: 'email@example.com', required: true,
+                       class: 'field mb-1' %>
+
+    <small class="block text-sm text-gray-600 mb-4">
+      We will send an email containing a sign in link
+    </small>
+
+    <%= f.submit I18n.t('passwordless.sessions.new.submit'), class: 'button' %>
+  <% end %>
+</div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  mount Lockup::Engine, at: '/lockup'
   passwordless_for :companies
+  mount Lockup::Engine, at: '/lockup'
 
   root 'pages#index'
 
@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   get 'company-info', to: 'pages#company_info'
   get 'payment', to: 'pages#payment'
   get 'show', to: 'pages#show'
-  # get 'sign-in', to: 'pages#sign_in'
 end

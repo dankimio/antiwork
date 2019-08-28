@@ -6,12 +6,13 @@ class ApplicationController < ActionController::Base
   private
 
   def current_company
-    @current_company ||= authenticate_by_session(company)
+    @current_company ||= authenticate_by_session(Company)
   end
 
   def require_company!
     return if current_company
 
-    redirect_to root_path, flash: { error: 'Please log in first.' }
+    save_passwordless_redirect_location!(Company)
+    redirect_to companies.sign_in_path, flash: { error: 'Please log in first.' }
   end
 end
