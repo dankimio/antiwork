@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount Lockup::Engine, at: '/lockup'
 
+  passwordless_for :users
+
   root 'pages#index'
 
   get 'new-advert', to: 'pages#new'
