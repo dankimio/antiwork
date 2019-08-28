@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_160432) do
+ActiveRecord::Schema.define(version: 2019_08_28_160713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "name", null: false
+    t.string "website"
+    t.string "logo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_companies_on_email", unique: true
+  end
 
   create_table "passwordless_sessions", force: :cascade do |t|
     t.string "authenticatable_type"
