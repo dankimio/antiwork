@@ -1,5 +1,5 @@
 <div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
-  <%= form_with model: @job, remote: false do |f| %>
+  <%= form_with model: @job, local: true do |f| %>
     <h1 class="heading-1">New job</h1>
 
     <div class="w-12 h-1 bg-gray-800 mb-8"></div>
@@ -24,7 +24,7 @@
     </div>
     <small class="block text-sm text-gray-600 mb-4">You can still specify your main location</small>
 
-    <%= f.text_field :location, placeholder: 'Location', class: 'mb-8' %>
+    <%= f.text_field :location, placeholder: 'Location', class: 'field mb-8' %>
 
     <h2 class="heading-2 mb-4">Job description</h2>
 
