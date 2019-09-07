@@ -1,4 +1,5 @@
 job:
+  company: company
   title: MyString
   category: 1
   salary_min: 1
