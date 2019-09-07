@@ -1,0 +1,14 @@
+job:
+  title: MyString
+  category: 1
+  salary_min: 1
+  salary_max: 1
+  remote: false
+  visa_sponsorship: false
+  city: MyString
+  country: MyString
+  level: 1
+  description: MyText
+  how_to_apply: MyText
+  paid: false
+  published_at: 2019-09-07 20:30:14
