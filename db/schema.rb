@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_160713) do
+ActiveRecord::Schema.define(version: 2019_09_07_194607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 2019_08_28_160713) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_companies_on_email", unique: true
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.string "title", null: false
+    t.integer "category"
+    t.integer "salary_min"
+    t.integer "salary_max"
+    t.boolean "remote", default: false
+    t.boolean "visa_sponsorship", default: false
+    t.string "city"
+    t.string "country"
+    t.integer "level"
+    t.text "description"
+    t.text "how_to_apply"
+    t.boolean "paid", default: false
+    t.datetime "published_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_jobs_on_company_id"
   end
 
   create_table "passwordless_sessions", force: :cascade do |t|
@@ -39,4 +59,5 @@ ActiveRecord::Schema.define(version: 2019_08_28_160713) do
     t.index ["authenticatable_type", "authenticatable_id"], name: "authenticatable"
   end
 
+  add_foreign_key "jobs", "companies"
 end
