@@ -12,12 +12,6 @@ class PagesController < ApplicationController
   def show
   end
 
-  def new
-  end
-
-  def job_description
-  end
-
   def company_info
   end
 
