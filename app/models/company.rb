@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
   validates :email, presence: true
-  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :name, uniqueness: { case_sensitive: false }, allow_blank: true
 
   before_save -> { email.downcase! }
 

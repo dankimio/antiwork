@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_160713) do
 
   create_table "companies", force: :cascade do |t|
     t.string "email", null: false
-    t.string "name", null: false
+    t.string "name"
     t.string "website"
     t.string "logo"
     t.datetime "created_at", precision: 6, null: false
