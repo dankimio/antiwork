@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources :jobs, only: %i[new]
+  resources :jobs, only: %i[new create]
 
   get 'company-info', to: 'pages#company_info'
   get 'payment', to: 'pages#payment'
