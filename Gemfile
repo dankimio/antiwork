@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Utilities
-gem 'lockup', github: 'gblakeman/lockup'
+gem 'lockup', '~> 1.5'
 
 # Auth
 gem 'passwordless', '~> 0.8'
