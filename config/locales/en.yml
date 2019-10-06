@@ -44,6 +44,11 @@ en:
         motion: 'Motion design / animation'
         illustration: 'Illustration'
         branding: 'Branding'
+      job/level:
+        junior: 'Junior'
+        middle: 'Mid-level'
+        senior: 'Senior'
+        lead: 'Lead / Director'
   number:
     currency:
       format:

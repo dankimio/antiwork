@@ -3,6 +3,9 @@ class Job < ApplicationRecord
   enum category: [
     :ui, :graphic, :motion, :illustration, :branding, :other
   ]
+  enum level: [
+    :junior, :middle, :senior, :lead
+  ]
 
   belongs_to :company
 
