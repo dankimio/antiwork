@@ -44,3 +44,14 @@ en:
         motion: 'Motion design / animation'
         illustration: 'Illustration'
         branding: 'Branding'
+  number:
+    currency:
+      format:
+        currency_code: RUB
+        delimiter: " "
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "₽"
