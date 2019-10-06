@@ -10,9 +10,11 @@
     </span>
   </div>
   <p class="mb-1 text-gray-700">
-    <%= job[:salary] %>
+    <%= number_to_currency job[:salary_min] %>
+    –
+    <%= number_to_currency job[:salary_max] %>
     <span class="text-gray-500">|</span>
-    <%= job[:category] %>
+    Full-time
   </p>
   <p class="mb-2 text-sm text-gray-800">Posted 3 days ago</p>
   <div class="flex">

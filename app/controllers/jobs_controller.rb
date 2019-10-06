@@ -3,11 +3,11 @@ class JobsController < ApplicationController
 
   def index
     @jobs = [
-      { title: 'UX designer', company: 'Frogogo', salary: '$72k–105k', category: 'Software development', location: 'London' },
-      { title: 'Creative manager', company: 'Facebook', salary: '$42k–75k', category: 'Design', location: 'Berlin' },
-      { title: 'Illustrator', company: 'WeWork', salary: '$32k–555k', category: 'Customer support', location: 'Paris' },
-      { title: 'Senior artwork designer', company: 'Airbnb', salary: '$95k–125k', category: 'Software development', location: 'New York' },
-      { title: 'Head of brand', company: 'Uber', salary: '$75k–100k', category: 'Management', location: 'Sydney' },
+      { title: 'UX designer', company: 'Frogogo', salary_min: 72000, salary_max: 105000, category: 'Software development', location: 'London' },
+      { title: 'Creative manager', company: 'Facebook', salary_min: 42000, salary_max: 75000, category: 'Design', location: 'Berlin' },
+      { title: 'Illustrator', company: 'WeWork', salary_min: 32000, salary_max: 55000, category: 'Customer support', location: 'Paris' },
+      { title: 'Senior artwork designer', company: 'Airbnb', salary_min: 95000, salary_max: 125000, category: 'Software development', location: 'New York' },
+      { title: 'Head of brand', company: 'Uber', salary_min: 75000, salary_max: 100000, category: 'Management', location: 'Sydney' },
     ]
   end
 
