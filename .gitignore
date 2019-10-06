@@ -29,3 +29,4 @@ yarn-debug.log*
 
 # macOS
 .DS_Store
+/config/credentials/production.key

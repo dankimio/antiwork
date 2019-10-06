@@ -107,5 +107,19 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.default_url_options = { host: 'anti.work' }
+  # ActionMailer
+  host = ENV['HOSTNAME'] || 'localhost'
+  protocol = ENV['HOSTNAME'] ? 'https' : 'http'
+
+  config.action_mailer.default_url_options = {
+    host: host,
+    protocol: protocol
+  }
+  config.action_mailer.smtp_settings = {
+    port: 587,
+    address: Rails.application.credentials.dig(:mailgun, :smtp_hostname),
+    user_name: Rails.application.credentials.dig(:mailgun, :smtp_username),
+    password: Rails.application.credentials.dig(:mailgun, :smtp_password),
+    authentication: 'plain'
+  }
 end
