@@ -60,3 +60,11 @@ en:
         significant: false
         strip_insignificant_zeros: false
         unit: "₽"
+  jobs:
+    new:
+      title: 'New job'
+  sessions:
+    create:
+      title: 'Check your inbox'
+    new:
+      title: 'Sign in'
