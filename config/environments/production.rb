@@ -117,7 +117,6 @@ Rails.application.configure do
     address: Rails.application.credentials.dig(:mailgun, :smtp_hostname),
     user_name: Rails.application.credentials.dig(:mailgun, :smtp_username),
     password: Rails.application.credentials.dig(:mailgun, :smtp_password),
-    domain: ENV['HOSTNAME'],
     authentication: 'plain'
   }
 end
