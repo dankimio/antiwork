@@ -95,30 +95,19 @@ input[type=checkbox]:checked:after {
 /* Dropdowns */
 
 .dropdown-link {
-  @apply bg-white;
-  & .dropdown-arrow {
-    transition: all 0.3s ease-in-out;
-  }
+  @apply block relative z-10;
+}
 
-  &:hover {
-    & .dropdown-arrow {
-      transform: rotate(180deg);
-    }
-
-    & .dropdown-content {
-      @apply block z-10;
-    }
-  }
+.dropdown-overlay {
+  @apply fixed inset-0 h-full w-full cursor-default;
+  /* @apply bg-black opacity-50; */
 }
 
 .dropdown-list {
-  @apply bg-white;
-  & .dropdown-list-item {
-    @apply flex px-4 py-2 border-b border-gray-200 cursor-pointer bg-white items-center;
+  @apply z-10 absolute left-0 mt-2 w-64 bg-white rounded-lg py-2 shadow-lg border;
 
-    &:last-child {
-      @apply border-none;
-    }
+  & .dropdown-list-item {
+    @apply block px-4 py-2 text-gray-800;
 
     &:hover {
       @apply bg-gray-100;

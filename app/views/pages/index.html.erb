@@ -3,39 +3,18 @@
     <input type="text" class="field mb-3" placeholder="Please enter query…">
   <% end %>
 
-  <div class="flex mb-1">
-    <div class="dropdown-link mr-6 text-gray-600">
+  <div class="relative">
+    <button class="dropdown-link text-gray-700">
       Category
 
       <%= image_tag 'arrow-dropdown.svg',
                     class: 'injectable dropdown-arrow inline-block h-6 w-6 ml-1 text-gray-600 fill-current' %>
-
-      <div class=" dropdown-content absolute hidden w-64 shadow-lg text-gray-700">
-        <ul class="dropdown-list">
-          <div class="dropdown-list-item">
-            <span class="flex-1">Software development</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Design</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Customer support</span>
-            <span class="ml-2">
-              <%= image_tag 'checkmark.svg', class: 'injectable w-4 text-gray-600 fill-current' %>
-            </span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Management</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Analytics</span>
-            <span></span>
-          </div>
-        </ul>
-      </div>
+    </button>
+    <button class="dropdown-overlay hidden" tabindex="-1"></button>
+    <div class="dropdown-list hidden">
+      <a href="#" class="dropdown-list-item">UI design</a>
+      <a href="#" class="dropdown-list-item">UX design</a>
+      <a href="#" class="dropdown-list-item">Product design</a>
     </div>
   </div>
 
