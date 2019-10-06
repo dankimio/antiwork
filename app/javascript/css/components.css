@@ -110,7 +110,7 @@ input[type=checkbox]:checked:after {
 }
 
 .dropdown-list {
-  @apply z-10 absolute left-0 mt-2 w-64 bg-white rounded-lg py-2 shadow-lg border;
+  @apply z-10 absolute left-0 mt-2 w-64 bg-white py-2 shadow-lg border;
 
   & .dropdown-list-item {
     @apply block px-4 py-2 text-gray-800;
