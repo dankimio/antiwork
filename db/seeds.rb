@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+titles = [
+  'UX designer', 'Creative manager', 'Illustrator',
+  'Artwork designer', 'Head of brand', 'UI designer',
+  'Product designer', 'Creative lead', 'Graphic designer',
+  'Senior designer', 'Design intern', 'Mobile app designer'
+]
+companies = [
+  'Twitter', 'Facebook', 'WeWork',
+  'Airbnb', 'Uber', 'Google',
+  'Dribbble', 'Adobe', 'Stripe'
+]
+
+companies.each do |company_name|
+  company = Company.create!(
+    email: "admin@#{company_name.downcase}.com",
+    name: company_name
+  )
+
+  2.times do
+    salary_min = (50..100).to_a.sample * 1000
+    Job.create!(
+      title: titles.sample,
+      company: company,
+      category: Job.categories.keys.sample,
+      salary_min: salary_min,
+      salary_max: salary_min * 2,
+      remote: [false, true].sample,
+      visa_sponsorship: [false, true].sample,
+      level: Job.levels.keys.sample,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?',
+      how_to_apply: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?'
+    )
+  end
+end
