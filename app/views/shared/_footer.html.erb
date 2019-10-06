@@ -1,7 +1,14 @@
 <div class="text-center mb-10">
-  <%= link_to '#',
-              class: 'underlined underlined-black text-lg font-semibold mr-1' do %>
-  Sign in
+  <% if current_company %>
+    <%= link_to companies.sign_out_path, method: :delete,
+      class: 'underlined underlined-black text-lg font-semibold mr-1' do %>
+      Sign out
+    <% end %>
+  <% else %>
+    <%= link_to companies.sign_in_path,
+                class: 'underlined underlined-black text-lg font-semibold mr-1' do %>
+      Sign in
+    <% end %>
+    <span class="text-gray-600">for existing users</span>
   <% end %>
-  <span class="text-gray-600">for existing users</span>
 </div>
