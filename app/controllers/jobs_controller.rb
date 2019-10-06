@@ -2,13 +2,7 @@ class JobsController < ApplicationController
   before_action :require_company!, except: %i[index]
 
   def index
-    @jobs = [
-      { title: 'UX designer', company: 'Frogogo', salary_min: 72000, salary_max: 105000, category: 'Software development', location: 'London' },
-      { title: 'Creative manager', company: 'Facebook', salary_min: 42000, salary_max: 75000, category: 'Design', location: 'Berlin' },
-      { title: 'Illustrator', company: 'WeWork', salary_min: 32000, salary_max: 55000, category: 'Customer support', location: 'Paris' },
-      { title: 'Senior artwork designer', company: 'Airbnb', salary_min: 95000, salary_max: 125000, category: 'Software development', location: 'New York' },
-      { title: 'Head of brand', company: 'Uber', salary_min: 75000, salary_max: 100000, category: 'Management', location: 'Sydney' },
-    ]
+    @jobs = Job.includes(:company).all
   end
 
   def show
