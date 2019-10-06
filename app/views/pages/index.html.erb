@@ -12,9 +12,11 @@
     </button>
     <button class="dropdown-overlay hidden" tabindex="-1"></button>
     <div class="dropdown-list hidden">
-      <a href="#" class="dropdown-list-item">UI design</a>
-      <a href="#" class="dropdown-list-item">UX design</a>
-      <a href="#" class="dropdown-list-item">Product design</a>
+      <% Job.categories.each do |key, value| %>
+        <a href="#" class="dropdown-list-item">
+          <%= Job.human_attribute_name("category.#{key}") %>
+        </a>
+      <% end %>
     </div>
   </div>
 

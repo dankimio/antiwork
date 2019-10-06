@@ -1,7 +1,8 @@
 class Job < ApplicationRecord
-  enum category: {
-    # ui:
-  }
+  # other, ui ux, graphic, animation / motion, illustration, management (creative / art director), brand
+  enum category: [
+    :ui, :graphic, :motion, :illustration, :branding, :other
+  ]
 
   belongs_to :company
 
