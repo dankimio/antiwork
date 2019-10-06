@@ -7,4 +7,8 @@ class Company < ApplicationRecord
   before_save -> { email.downcase! }
 
   passwordless_with :email
+
+  def self.fetch_resource_for_passwordless(email)
+    find_or_create_by(email: email)
+  end
 end
