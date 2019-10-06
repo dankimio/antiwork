@@ -108,10 +108,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # ActionMailer
-  config.action_mailer.default_url_options = {
-    host: ENV['HOSTNAME'] || 'localhost',
-    protocol: ENV['HOSTNAME'] ? 'https' : 'http'
-  }
+  config.action_mailer.default_url_options = { host: ENV['HOSTNAME'], protocol: 'https' }
   config.action_mailer.smtp_settings = {
     port: 587,
     address: Rails.application.credentials.dig(:mailgun, :smtp_hostname),
@@ -119,4 +116,7 @@ Rails.application.configure do
     password: Rails.application.credentials.dig(:mailgun, :smtp_password),
     authentication: 'plain'
   }
+
+  # Custom variables
+  config.hostname = ENV['HOSTNAME']
 end

@@ -1,1 +1,1 @@
-Passwordless.default_from_address = "noreply@#{ENV['HOSTNAME']}"
+Passwordless.default_from_address = "noreply@#{Rails.application.config.hostname}"
