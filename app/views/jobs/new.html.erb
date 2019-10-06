@@ -18,13 +18,16 @@
       <%= f.text_field :salary_max, placeholder: 'Max salary', class: 'flex-1 field' %>
     </div>
 
-    <div class="flex items-center mb-2">
+    <div class="flex items-center mb-8">
       <%= f.check_box :remote, class: 'w-6 h-6 border-2 mr-2' %>
       <label for="remote" class="text-gray-700">This is a remote position</label>
     </div>
-    <small class="block text-sm text-gray-600 mb-4">You can still specify your main location</small>
 
-    <%= f.text_field :location, placeholder: 'Location', class: 'field mb-8' %>
+    <% if false %>
+      <small class="block text-sm text-gray-600 mb-4">You can still specify your main location</small>
+
+      <%= f.text_field :location, placeholder: 'Location', class: 'field mb-8' %>
+    <% end %>
 
     <h2 class="heading-2 mb-4">Job description</h2>
 
