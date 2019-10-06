@@ -19,52 +19,7 @@
   </div>
 
   <% @jobs.each_with_index do |job, index| %>
-    <div class="py-5">
-      <div class="mb-2">
-        <%= link_to show_path,
-                    class: 'underlined underlined-black text-xl lg:text-2xl font-semibold mr-1' do %>
-        <%= job[:title] %>
-        <% end %>
-        <span class="text-gray-600 lg:text-lg mr-1">at</span>
-        <span class="text-lg lg:text-xl">
-          <%= job[:company] %>
-        </span>
-      </div>
-      <p class="mb-1 text-gray-700">
-        <%= job[:salary] %>
-        <span class="text-gray-500">|</span>
-        <%= job[:category] %>
-      </p>
-      <p class="mb-2 text-sm text-gray-800">Posted 3 days ago</p>
-      <div class="flex">
-        <% if false %>
-          <span class="tag mr-2">
-            <%= image_tag 'pin.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
-            <%= job[:location] %>
-          </span>
-        <% end %>
-
-        <span class="tag mr-2">
-          <%= 'UI Design' %>
-        </span>
-
-        <% if index % 3 == 0 %>
-        <span class="tag mr-2">
-          <%= image_tag 'globe.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
-          Remote
-        </span>
-        <% end %>
-
-        <% if index % 2 == 0 %>
-        <span class="tag mr-2">
-          <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
-          Visa
-        </span>
-        <% end %>
-      </div>
-    </div>
-
-    <hr class="border-b-2 border-gray-200 mb-0">
+    <%= render 'jobs/job', job: job, index: index %>
   <% end %>
 </div>
 
