@@ -11,6 +11,9 @@ class JobsController < ApplicationController
     ]
   end
 
+  def show
+  end
+
   def new
     @job = current_company.jobs.build
   end

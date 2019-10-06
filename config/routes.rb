@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   root 'jobs#index'
 
   resource :company, only: %i[edit update]
-  resources :jobs, only: %i[index new create]
+  resources :jobs, only: %i[index show new create]
 
   get 'payment', to: 'pages#payment'
-  get 'show', to: 'pages#show'
 end
