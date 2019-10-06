@@ -8,16 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.reinjectSvgs = () => SVGInject(document.querySelectorAll('img.injectable'))
 
-  let dropdown = document.querySelector('.dropdown-link');
-  let dropdownOverlay = document.querySelector('.dropdown-overlay');
+  let dropdowns = document.querySelectorAll('.dropdown')
+  dropdowns.forEach((dropdown) => {
+    let dropdownLink = dropdown.querySelector('.dropdown-link')
+    dropdownLink.addEventListener('click', () => {
+      dropdownLink.parentNode
+        .querySelector('.dropdown-overlay')
+        .classList
+        .toggle('hidden')
+      dropdownLink.parentNode
+        .querySelector('.dropdown-list')
+        .classList
+        .toggle('hidden')
+    })
 
-  dropdown.addEventListener('click', () => {
-    dropdown.parentNode.querySelector('.dropdown-overlay').classList.toggle('hidden')
-    dropdown.parentNode.querySelector('.dropdown-list').classList.toggle('hidden')
-  })
-
-  dropdownOverlay.addEventListener('click', () => {
-    dropdown.parentNode.querySelector('.dropdown-overlay').classList.toggle('hidden')
-    dropdown.parentNode.querySelector('.dropdown-list').classList.toggle('hidden')
+    let dropdownOverlay = dropdown.querySelector('.dropdown-overlay')
+    dropdownOverlay.addEventListener('click', () => {
+      dropdownOverlay.parentNode
+        .querySelector('.dropdown-overlay')
+        .classList
+        .toggle('hidden')
+      dropdownOverlay.parentNode
+        .querySelector('.dropdown-list')
+        .classList
+        .toggle('hidden')
+    })
   })
 })
