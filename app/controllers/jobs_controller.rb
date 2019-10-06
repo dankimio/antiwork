@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :require_company!
+  before_action :require_company!, except: %i[index]
 
   def index
     @jobs = [
