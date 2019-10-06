@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  passwordless:
+    sessions:
+      create:
+        email_sent_if_record_found: "We've sent you an email. Click on the link to sign in."
