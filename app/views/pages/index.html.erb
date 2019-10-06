@@ -37,40 +37,6 @@
         </ul>
       </div>
     </div>
-
-    <div class="dropdown-link mr-6 text-gray-600">
-      Location
-
-      <%= image_tag 'arrow-dropdown.svg',
-                    class: 'injectable dropdown-arrow inline-block h-6 w-6 ml-1 text-gray-600 fill-current' %>
-
-      <div class=" dropdown-content absolute hidden w-48 shadow-lg text-gray-700">
-        <ul class="dropdown-list">
-          <div class="dropdown-list-item">
-            <span class="flex-1">London</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">New York City</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Berlin</span>
-            <span class="ml-2">
-              <%= image_tag 'checkmark.svg', class: 'injectable w-4 text-gray-600 fill-current' %>
-            </span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Sydney</span>
-            <span></span>
-          </div>
-          <div class="dropdown-list-item">
-            <span class="flex-1">Paris</span>
-            <span></span>
-          </div>
-        </ul>
-      </div>
-    </div>
   </div>
 
   <% @jobs.each_with_index do |job, index| %>
