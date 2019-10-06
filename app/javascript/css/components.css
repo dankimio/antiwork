@@ -6,7 +6,7 @@
 .heading-4,
 .heading-5,
 .heading-6 {
-  @apply font-semibold text-gray-900 leading-tight;
+  @apply font-semibold text-gray-800 leading-tight;
 }
 
 .heading-1 {
@@ -33,6 +33,12 @@
   .heading-3 {
     @apply text-2xl;
   }
+}
+
+/* Bar */
+
+.bar {
+  @apply w-12 h-1 bg-gray-800;
 }
 
 /* Links */
