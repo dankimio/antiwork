@@ -1,36 +1,32 @@
 <%= content_for :title, 'Customer support manager' %>
 
 <div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
-  <h1 class="heading-1 mb-1">Customer support manager</h1>
+  <h1 class="heading-1 mb-1">
+    <%= @job.title %>
+  </h1>
 
   <p class="heading-3 mb-2">
     <span class="font-normal text-gray-600">at</span>
-    <strong class="font-semibold text-gray-800">Microsoft London</strong>
+    <strong class="font-semibold text-gray-800">
+      <%= @job.company.name %>
+    </strong>
   </p>
 
   <div class="w-12 h-1 bg-gray-800 mb-8"></div>
 
   <article class="text-gray-900">
-    <p class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?</p>
-
-    <p class="mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, assumenda? Quasi reprehenderit corrupti pariatur debitis vitae consequuntur dolorem eum voluptatum ad omnis magnam amet ipsum, recusandae deserunt iusto veniam at?</p>
-
-    <h3 class="font-semibold mb-2 text-lg">Requirements / benefits</h3>
-
-    <ul class="mb-6 " style="list-style: inside square">
-      <li>Requirement 1</li>
-      <li>Requirement 2</li>
-      <li>Requirement 3</li>
-      <li>Requirement 4</li>
-      <li>Requirement 5</li>
-    </ul>
+    <p class="mb-6">
+      <%= @job.description %>
+    </p>
 
     <h3 class="font-semibold mb-2 text-lg">How to apply:</h3>
 
-    <p class="mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus earum numquam deserunt odio! Cupiditate, sint.</p>
+    <p class="mb-6">
+      <%= @job.how_to_apply %>
+    </p>
   </article>
 
-  <a href="/job-description" class="button">
+  <a href="#" class="button">
     Apply
   </a>
 </div>

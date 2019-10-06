@@ -1,11 +1,12 @@
 class JobsController < ApplicationController
-  before_action :require_company!, except: %i[index]
+  before_action :require_company!, except: %i[index show]
 
   def index
     @jobs = Job.includes(:company).all
   end
 
   def show
+    @job = Job.find(params[:id])
   end
 
   def new
