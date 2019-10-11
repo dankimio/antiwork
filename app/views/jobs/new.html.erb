@@ -8,9 +8,10 @@
                      placeholder: 'Title', required: true,
                      class: 'field mb-4' %>
 
-    <%= f.text_field :category,
-                     placeholder: 'Category', required: true,
-                     class: 'field mb-4' %>
+    <%= f.select :category,
+                 Job.categories.keys.map { |key| [Job.human_attribute_name("category.#{key}"), key] },
+                 { prompt: 'Category' },
+                 placeholder: 'Category', required: true, class: 'custom-select mb-4' %>
 
     <div class="mb-4 flex">
       <%= f.text_field :salary_min, placeholder: 'Min salary', class: 'flex-1 field' %>
@@ -39,7 +40,10 @@
                     cols: 4, placeholder: 'How to apply',
                     class: 'field mb-4' %>
 
-    <%= f.text_field :level, placeholder: 'Level', class: 'field mb-4' %>
+    <%= f.select :level,
+                 Job.levels.keys.map { |key| [Job.human_attribute_name("level.#{key}"), key] },
+                 { prompt: 'Level' },
+                 placeholder: 'Level', required: true, class: 'custom-select mb-4' %>
 
     <%= f.text_field :tags, placeholder: 'Tags', class: 'field mb-4' %>
 
