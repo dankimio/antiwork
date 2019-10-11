@@ -14,9 +14,9 @@
       <button class="dropdown-overlay hidden" tabindex="-1"></button>
       <div class="dropdown-list hidden">
         <% Job.categories.each do |key, value| %>
-          <a href="#" class="dropdown-list-item">
-            <%= Job.human_attribute_name("category.#{key}") %>
-          </a>
+          <%= link_to Job.human_attribute_name("category.#{key}"),
+                      jobs_path(category: key),
+                      class: 'dropdown-list-item' %>
         <% end %>
       </div>
     </div>
