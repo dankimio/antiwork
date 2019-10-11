@@ -21,22 +21,24 @@
       </div>
     </div>
 
-    <div class="dropdown inline-block">
-      <button class="dropdown-link text-gray-700">
-        Level
+    <% if false %>
+      <div class="dropdown inline-block">
+        <button class="dropdown-link text-gray-700">
+          Level
 
-        <%= image_tag 'arrow-dropdown.svg',
-                      class: 'injectable dropdown-arrow inline-block h-6 w-6 ml-1 text-gray-600 fill-current' %>
-      </button>
-      <button class="dropdown-overlay hidden" tabindex="-1"></button>
-      <div class="dropdown-list dropdown-list-xs hidden">
-        <% Job.levels.each do |key, value| %>
-          <a href="#" class="dropdown-list-item">
-            <%= Job.human_attribute_name("category.#{key}") %>
-          </a>
-        <% end %>
+          <%= image_tag 'arrow-dropdown.svg',
+                        class: 'injectable dropdown-arrow inline-block h-6 w-6 ml-1 text-gray-600 fill-current' %>
+        </button>
+        <button class="dropdown-overlay hidden" tabindex="-1"></button>
+        <div class="dropdown-list dropdown-list-xs hidden">
+          <% Job.levels.each do |key, value| %>
+            <a href="#" class="dropdown-list-item">
+              <%= Job.human_attribute_name("category.#{key}") %>
+            </a>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
