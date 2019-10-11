@@ -41,6 +41,12 @@
   @apply w-12 h-1 bg-gray-800;
 }
 
+/* Container */
+
+.container.container--unpadded {
+  @apply .px-0;
+}
+
 /* Links */
 
 a.underlined {
