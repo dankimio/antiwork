@@ -12,19 +12,57 @@
     </strong>
   </p>
 
-  <div class="w-12 h-1 bg-gray-800 mb-8"></div>
+  <div class="w-12 h-1 bg-gray-800 mb-4"></div>
 
-  <article class="text-gray-900">
+  <div class="mb-5">
+    <p class="mb-2 text-gray-700">
+      <%= number_to_currency @job.salary_min %>
+      –
+      <%= number_to_currency @job.salary_max %>
+      <span class="text-gray-500">|</span>
+      Full-time
+    </p>
+    <div class="flex">
+      <% if false %>
+        <span class="tag mr-2">
+          <%= image_tag 'pin.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
+          <%= @job.location %>
+        </span>
+      <% end %>
+
+      <span class="tag mr-2">
+        <%= Job.human_attribute_name("category.#{@job.category}") %>
+      </span>
+
+      <% if @job.remote? %>
+        <span class="tag mr-2">
+          <%= image_tag 'globe.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
+          Remote
+        </span>
+      <% end %>
+
+      <% if @job.visa_sponsorship? %>
+      <span class="tag mr-2">
+        <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
+        Visa
+      </span>
+      <% end %>
+    </div>
+  </div>
+
+  <article class="text-gray-900 mb-4">
     <p class="mb-6">
       <%= @job.description %>
     </p>
 
     <h3 class="font-semibold mb-2 text-lg">How to apply:</h3>
 
-    <p class="mb-6">
+    <p class="">
       <%= @job.how_to_apply %>
     </p>
   </article>
+
+  <p class="mb-2 text-sm text-gray-600 mb-6">Posted 3 days ago</p>
 
   <a href="#" class="button">
     Apply
