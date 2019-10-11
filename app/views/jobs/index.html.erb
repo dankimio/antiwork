@@ -6,7 +6,7 @@
   <div class="mb-5">
     <div class="dropdown inline-block mr-4 sm:mr-5">
       <button class="dropdown-link text-gray-700">
-        Category
+        Category<%= ": #{Job.human_attribute_name("category.#{params[:category]}")}" if params[:category].present? %>
 
         <%= image_tag 'arrow-dropdown.svg',
                       class: 'injectable dropdown-arrow inline-block h-6 w-6 ml-1 text-gray-600 fill-current' %>
