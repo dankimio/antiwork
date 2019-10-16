@@ -1,0 +1,42 @@
+---
+ru:
+  activerecord:
+    attributes:
+      job/category:
+        branding: Бренд
+        graphic: Графический дизайн
+        illustration: Иллюстрация
+        motion: Моушен дизайн / анимация
+        other: Другое
+        ui: UI / UX дизайн
+      job/level:
+        junior: Junior
+        lead: Lead
+        middle: Middle
+        senior: Senior
+  jobs:
+    new:
+      title: Создать вакансию
+  number:
+    currency:
+      format:
+        currency_code: RUB
+        delimiter: " "
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: 'false'
+        strip_insignificant_zeros: 'false'
+        unit: "₽"
+  passwordless:
+    sessions:
+      create:
+        email_sent_if_record_found: На указанный адрес было отправлено письмо. Перейдите по ссылке в письме, чтобы войти.
+      new:
+        heading: Регистрация и вход
+        submit: Подтвердить
+  sessions:
+    create:
+      title: Проверьте почту
+    new:
+      title: Вход
