@@ -33,8 +33,12 @@ en:
   hello: "Hello world"
   passwordless:
     sessions:
+      new:
+        title: "Sign up or sign in"
+        heading: "Sign up or sign in"
+        submit: "Submit"
       create:
-        email_sent_if_record_found: "We've sent you an email. Click on the link to sign in."
+        email_sent_if_record_found: "We've sent you an email. Click on the link in the email to sign in."
   activerecord:
     attributes:
       job/category:
