@@ -2,6 +2,19 @@
 ru:
   activerecord:
     attributes:
+      job:
+        title: Позиция
+        category: Категория
+        salary_min: Мин. зарплата
+        salary_max: Макс. зарплата
+        remote: Удалёнка
+        visa_sponsorship: Оформление визы
+        category: Категория
+        city: Город
+        country: Страна
+        level: Уровень
+        description: Описание
+        how_to_apply: Инструкция
       job/category:
         branding: Бренд
         graphic: Графический дизайн

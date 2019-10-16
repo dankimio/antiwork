@@ -5,51 +5,55 @@
     <div class="bar mb-8"></div>
 
     <%= f.text_field :title,
-                     placeholder: 'Title', required: true,
+                     placeholder: true, required: true,
                      class: 'field mb-4' %>
 
     <%= f.select :category,
                  Job.categories.keys.map { |key| [Job.human_attribute_name("category.#{key}"), key] },
-                 { prompt: 'Category' },
-                 placeholder: 'Category', required: true, class: 'custom-select mb-4' %>
+                 { prompt: Job.human_attribute_name('category') },
+                 placeholder: true, required: true, class: 'custom-select mb-4' %>
 
     <div class="mb-4 flex">
-      <%= f.text_field :salary_min, placeholder: 'Min salary', class: 'flex-1 field' %>
+      <%= f.text_field :salary_min, placeholder: true, class: 'flex-1 field' %>
       <div class="w-4"></div>
-      <%= f.text_field :salary_max, placeholder: 'Max salary', class: 'flex-1 field' %>
+      <%= f.text_field :salary_max, placeholder: true, class: 'flex-1 field' %>
     </div>
 
     <div class="flex items-center mb-8">
       <%= f.check_box :remote, class: 'w-6 h-6 border-2 mr-2' %>
-      <label for="remote" class="text-gray-700">This is a remote position</label>
+      <label for="remote" class="text-gray-700">
+        <%= Job.human_attribute_name('remote') %>
+      </label>
     </div>
 
     <% if false %>
       <small class="block text-sm text-gray-600 mb-4">You can still specify your main location</small>
 
-      <%= f.text_field :location, placeholder: 'Location', class: 'field mb-8' %>
+      <%= f.text_field :location, placeholder: true, class: 'field mb-8' %>
     <% end %>
 
     <h2 class="heading-2 mb-4">Job description</h2>
 
     <%= f.text_area :description,
-                    cols: 4, placeholder: 'Job description', required: true,
+                    cols: 4, placeholder: true, required: true,
                     class: 'field mb-4' %>
 
     <%= f.text_area :how_to_apply,
-                    cols: 4, placeholder: 'How to apply',
+                    cols: 4, placeholder: true,
                     class: 'field mb-4' %>
 
     <%= f.select :level,
                  Job.levels.keys.map { |key| [Job.human_attribute_name("level.#{key}"), key] },
-                 { prompt: 'Level' },
-                 placeholder: 'Level', required: true, class: 'custom-select mb-4' %>
+                 { prompt: Job.human_attribute_name('level') },
+                 placeholder: true, required: true, class: 'custom-select mb-4' %>
 
-    <%= f.text_field :tags, placeholder: 'Tags', class: 'field mb-4' %>
+    <%= f.text_field :tags, placeholder: true, class: 'field mb-4' %>
 
     <div class="flex items-center mb-8">
       <%= f.check_box :visa_sponsorship, class: 'w-6 h-6 border-2 mr-2' %>
-      <label for="remote" class="text-gray-700">Offers visa sponsorship</label>
+      <label for="remote" class="text-gray-700">
+        <%= Job.human_attribute_name('visa_sponsorship') %>
+      </label>
     </div>
 
     <%= f.submit 'Next →', class: 'button' %>
