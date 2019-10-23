@@ -65,6 +65,9 @@ ru:
       title: Проверьте почту
     new:
       title: Вход
+  shared:
+    header:
+      post_button: Опубликовать
   views:
     at: в
     posted_at:
