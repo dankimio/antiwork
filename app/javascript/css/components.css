@@ -151,6 +151,12 @@ select.custom-select {
   @apply flex items-center border px-3 text-xs uppercase border-gray-400 tracking-wide text-gray-600;
 }
 
+a.tag:hover {
+  @apply border-gray-900 bg-gray-900 text-white;
+
+  transition: all .25s;
+}
+
 @screen lg {
   @apply text-sm;
 }
