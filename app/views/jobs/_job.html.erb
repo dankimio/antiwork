@@ -5,7 +5,7 @@
       <%= job.title %>
     <% end %>
     <span class="text-gray-600 lg:text-lg mr-1">
-      <%= t '.at' %>
+      <%= t 'views.at' %>
     </span>
     <span class="text-lg lg:text-xl">
       <%= job.company.name %>
@@ -19,7 +19,7 @@
     <%= Job.human_attribute_name("employment_type.#{job.employment_type}") %>
   </p>
   <p class="mb-2 text-sm text-gray-800">
-    <%= t '.posted_at', count: posted_at_count(job) %>
+    <%= t 'views.posted_at', count: posted_at_count(job) %>
   </p>
   <div class="flex flex-wrap">
     <% if false %>

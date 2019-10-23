@@ -6,7 +6,9 @@
   </h1>
 
   <p class="heading-3 mb-2">
-    <span class="font-normal text-gray-600">at</span>
+    <span class="font-normal text-gray-600">
+      <%= t 'views.at' %>
+    </span>
     <strong class="font-semibold text-gray-800">
       <%= @job.company.name %>
     </strong>
@@ -20,9 +22,9 @@
       –
       <%= number_to_currency @job.salary_max %>
       <span class="text-gray-500">|</span>
-      Full-time
+      <%= Job.human_attribute_name("employment_type.#{@job.employment_type}") %>
     </p>
-    <div class="flex">
+    <div class="flex flex-wrap">
       <% if false %>
         <span class="tag mr-2">
           <%= image_tag 'pin.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
@@ -42,10 +44,10 @@
       <% end %>
 
       <% if @job.visa_sponsorship? %>
-      <span class="tag mr-2">
-        <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
-        Visa
-      </span>
+        <span class="tag mr-2">
+          <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
+          <%= Job.human_attribute_name('visa_sponsorship') %>
+        </span>
       <% end %>
     </div>
   </div>
@@ -55,16 +57,20 @@
       <%= @job.description %>
     </p>
 
-    <h3 class="font-semibold mb-2 text-lg">How to apply:</h3>
+    <h3 class="font-semibold mb-2 text-lg">
+      <%= t '.how_to_apply' %>
+    </h3>
 
     <p class="">
       <%= @job.how_to_apply %>
     </p>
   </article>
 
-  <p class="mb-2 text-sm text-gray-600 mb-6">Posted 3 days ago</p>
+  <p class="mb-2 text-sm text-gray-600 mb-6">
+    <%= t 'views.posted_at', count: posted_at_count(@job) %>
+  </p>
 
   <a href="#" class="button">
-    Apply
+    <%= t '.apply_button' %>
   </a>
 </div>
