@@ -2,6 +2,22 @@
 en:
   activerecord:
     attributes:
+      company:
+        logo: Logo
+        name: Name
+        website: Website
+      job:
+        category: Category
+        city: City
+        country: Country
+        description: Description
+        how_to_apply: How to apply
+        level: Level
+        remote: Remote
+        salary_max: Max. salary
+        salary_min: Min. salary
+        title: Title
+        visa_sponsorship: Visa sponsorship
       job/category:
         branding: Branding
         graphic: Graphic design
@@ -9,14 +25,28 @@ en:
         motion: Motion design / animation
         other: Other
         ui: UI / UX design
+      job/employment_type:
+        contract: Contract
+        full_time: Full-time
+        part_time: Part-time
       job/level:
         junior: Junior
         lead: Lead / Director
         middle: Mid-level
         senior: Senior
+  companies:
+    edit:
+      email_help: Your primary email for logins and notifications, no spam
+      submit: Submit
+      title: Company info
   jobs:
     new:
+      description: Description
+      submit: Next →
       title: New job
+    show:
+      apply_button: Apply
+      how_to_apply: How to apply
   number:
     currency:
       format:
@@ -29,6 +59,9 @@ en:
         strip_insignificant_zeros: false
         unit: "₽"
   passwordless:
+    mailer:
+      magic_link: 'Here''s your link: %{link}'
+      subject: Your login link
     sessions:
       create:
         email_sent_if_record_found: We've sent you an email. Click on the link in the email to sign in.
@@ -41,3 +74,12 @@ en:
       title: Check your inbox
     new:
       title: Sign in
+  shared:
+    header:
+      post_button: Post a job
+  views:
+    at: at
+    posted_at:
+      one: Posted %{count} day ago
+      other: Posted %{count} days ago
+      zero: Posted today

@@ -68,6 +68,7 @@ ru:
       new:
         heading: Вход и регистрация
         submit: Подтвердить
+        title: Вход и регистрация
   sessions:
     create:
       title: Проверьте почту
