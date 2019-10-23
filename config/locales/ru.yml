@@ -3,22 +3,21 @@ ru:
   activerecord:
     attributes:
       company:
+        logo: Логотип
         name: Название
         website: Сайт
-        logo: Логотип
       job:
-        title: Позиция
-        category: Категория
-        salary_min: Мин. зарплата
-        salary_max: Макс. зарплата
-        remote: Удалёнка
-        visa_sponsorship: Оформление визы
         category: Категория
         city: Город
         country: Страна
-        level: Уровень
         description: Описание
         how_to_apply: Инструкция
+        level: Уровень
+        remote: Удалёнка
+        salary_max: Макс. зарплата
+        salary_min: Мин. зарплата
+        title: Позиция
+        visa_sponsorship: Оформление визы
       job/category:
         branding: Бренд
         graphic: Графический дизайн
@@ -27,9 +26,9 @@ ru:
         other: Другое
         ui: UI / UX дизайн
       job/employment_type:
+        contract: Контракт / фриланс
         full_time: Фул-тайм
         part_time: Парт-тайм
-        contract: Контракт / фриланс
       job/level:
         junior: Junior
         lead: Lead
@@ -37,14 +36,14 @@ ru:
         senior: Senior
   companies:
     edit:
-      title: Данные о компании
-      submit: Подтвердить
       email_help: Основной email для входа и уведомлений. Никакого спама.
+      submit: Подтвердить
+      title: Данные о компании
   jobs:
     new:
-      title: Новая вакансия
       description: Описание
       submit: Далее →
+      title: Новая вакансия
     show:
       apply_button: Откликнуться
       how_to_apply: Инструкция
@@ -60,15 +59,15 @@ ru:
         strip_insignificant_zeros: 'false'
         unit: "₽"
   passwordless:
+    mailer:
+      magic_link: 'Ссылка для входа: %{link}'
+      subject: Ссылка для входа
     sessions:
       create:
         email_sent_if_record_found: На указанный адрес было отправлено письмо. Перейдите по ссылке в письме, чтобы войти.
       new:
         heading: Вход и регистрация
         submit: Подтвердить
-    mailer:
-      subject: "Ссылка для входа"
-      magic_link: "Ссылка для входа: %{link}"
   sessions:
     create:
       title: Проверьте почту
@@ -80,7 +79,7 @@ ru:
   views:
     at: в
     posted_at:
-      zero: Опубликовано сегодня
-      one: Опубликовано %{count} день назад
       few: Опубликовано %{count} дня назад
       many: Опубликовано %{count} дней назад
+      one: Опубликовано %{count} день назад
+      zero: Опубликовано сегодня
