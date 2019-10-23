@@ -40,7 +40,9 @@ ru:
         few: Опубликовано %{count} дня назад
         many: Опубликовано %{count} дней назад
     new:
-      title: Создать вакансию
+      title: Новая вакансия
+      description: Описание
+      submit: Далее →
   number:
     currency:
       format:
