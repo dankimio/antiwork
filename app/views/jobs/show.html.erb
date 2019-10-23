@@ -32,9 +32,9 @@
         </span>
       <% end %>
 
-      <span class="tag mr-2">
+      <%= link_to jobs_path(category: @job.category), class: 'tag mr-2' do %>
         <%= Job.human_attribute_name("category.#{@job.category}") %>
-      </span>
+      <% end %>
 
       <% if @job.remote? %>
         <span class="tag mr-2">
