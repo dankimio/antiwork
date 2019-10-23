@@ -32,6 +32,8 @@ ru:
         middle: Middle
         senior: Senior
   jobs:
+    job:
+      at: в
     new:
       title: Создать вакансию
   number:

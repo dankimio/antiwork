@@ -4,7 +4,9 @@
                 class: 'underlined underlined-black text-xl lg:text-2xl font-semibold mr-1' do %>
       <%= job.title %>
     <% end %>
-    <span class="text-gray-600 lg:text-lg mr-1">at</span>
+    <span class="text-gray-600 lg:text-lg mr-1">
+      <%= t '.at' %>
+    </span>
     <span class="text-lg lg:text-xl">
       <%= job.company.name %>
     </span>
@@ -14,7 +16,7 @@
     –
     <%= number_to_currency job.salary_max %>
     <span class="text-gray-500">|</span>
-    Full-time
+    <%= Job.human_attribute_name("employment_type.#{job.employment_type}") %>
   </p>
   <p class="mb-2 text-sm text-gray-800">Posted 3 days ago</p>
   <div class="flex">
@@ -37,10 +39,10 @@
     <% end %>
 
     <% if job.visa_sponsorship? %>
-    <span class="tag mr-2">
-      <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
-      Visa
-    </span>
+      <span class="tag mr-2">
+        <%= image_tag 'airplane.svg', class: 'injectable h-3 text-gray-500 fill-current mr-1' %>
+        <%= Job.human_attribute_name('visa_sponsorship') %>
+      </span>
     <% end %>
   </div>
 </div>
