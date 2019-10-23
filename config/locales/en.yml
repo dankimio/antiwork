@@ -66,6 +66,7 @@ en:
       create:
         email_sent_if_record_found: We've sent you an email. Click on the link in the email to sign in.
       new:
+        email_help: We will send an email containing a sign in link
         heading: Sign up or sign in
         submit: Submit
         title: Sign up or sign in
@@ -75,6 +76,10 @@ en:
     new:
       title: Sign in
   shared:
+    footer:
+      for_existing_users: for existing users
+      sign_in_link: Sign in
+      sign_out_link: Sign out
     header:
       post_button: Post a job
   views:

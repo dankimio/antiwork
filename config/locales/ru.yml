@@ -60,14 +60,16 @@ ru:
         unit: "₽"
   passwordless:
     mailer:
-      magic_link: 'Ссылка для входа: %{link}'
+      # magic_link: 'Ссылка для входа: %{link}'
+      magic_link: 'Your login link: %{link}'
       subject: Ссылка для входа
     sessions:
       create:
         email_sent_if_record_found: На указанный адрес было отправлено письмо. Перейдите по ссылке в письме, чтобы войти.
       new:
+        email_help: Мы отправим ссылку для входа на указанный email
         heading: Вход и регистрация
-        submit: Подтвердить
+        submit: Отправить
         title: Вход и регистрация
   sessions:
     create:
@@ -75,6 +77,10 @@ ru:
     new:
       title: Вход
   shared:
+    footer:
+      for_existing_users: для зарегистрированных пользователей
+      sign_in_link: Вход
+      sign_out_link: Выйти
     header:
       post_button: Опубликовать
   views:
