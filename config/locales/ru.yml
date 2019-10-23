@@ -22,6 +22,10 @@ ru:
         motion: Моушен дизайн / анимация
         other: Другое
         ui: UI / UX дизайн
+      job/employment_type:
+        full_time: Фул-тайм
+        part_time: Парт-тайм
+        contract: Контракт / фриланс
       job/level:
         junior: Junior
         lead: Lead
@@ -46,7 +50,7 @@ ru:
       create:
         email_sent_if_record_found: На указанный адрес было отправлено письмо. Перейдите по ссылке в письме, чтобы войти.
       new:
-        heading: Регистрация и вход
+        heading: Вход и регистрация
         submit: Подтвердить
   sessions:
     create:
