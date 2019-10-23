@@ -2,6 +2,10 @@
 ru:
   activerecord:
     attributes:
+      company:
+        name: Название
+        website: Сайт
+        logo: Логотип
       job:
         title: Позиция
         category: Категория
@@ -31,6 +35,11 @@ ru:
         lead: Lead
         middle: Middle
         senior: Senior
+  companies:
+    edit:
+      title: Данные о компании
+      submit: Подтвердить
+      email_help: Основной email для входа и уведомлений. Никакого спама.
   jobs:
     new:
       title: Новая вакансия

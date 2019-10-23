@@ -1,27 +1,31 @@
 <div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
-  <h1 class="heading-1">Company info</h1>
+  <h1 class="heading-1 mb-2">
+    <%= t '.title' %>
+  </h1>
 
   <div class="bar mb-8"></div>
 
   <%= form_with model: @company, local: true do |f| %>
 
     <%= f.text_field :name,
-                    placeholder: 'Company name', required: true,
-                    class: 'field mb-4' %>
+                     placeholder: true, required: true,
+                     class: 'field mb-4' %>
 
     <%= f.url_field :website,
-                    placeholder: 'Website', required: true,
+                    placeholder: true, required: true,
                     class: 'field mb-4' %>
 
-    <%= f.text_field :field,
-                    placeholder: 'Logo (optional)',
-                    class: 'field mb-4' %>
+    <%= f.text_field :logo,
+                     placeholder: true,
+                     class: 'field mb-4' %>
 
     <%= f.email_field :field,
-                    placeholder: 'Email', required: true,
-                    class: 'field mb-2' %>
-    <small class="block text-sm text-gray-600 mb-6">Your primary email for logins and notifications, no spam</small>
+                      placeholder: 'Email', required: true,
+                      class: 'field mb-2' %>
+    <small class="block text-sm text-gray-600 mb-6">
+      <%= t '.email_help' %>
+    </small>
 
-    <%= f.submit 'Next →', class: 'button' %>
+    <%= f.submit t('.submit'), class: 'button' %>
   <% end %>
 </div>
