@@ -34,6 +34,11 @@ ru:
   jobs:
     job:
       at: в
+      posted_at:
+        zero: Опубликовано сегодня
+        one: Опубликовано %{count} день назад
+        few: Опубликовано %{count} дня назад
+        many: Опубликовано %{count} дней назад
     new:
       title: Создать вакансию
   number:

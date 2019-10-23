@@ -18,7 +18,9 @@
     <span class="text-gray-500">|</span>
     <%= Job.human_attribute_name("employment_type.#{job.employment_type}") %>
   </p>
-  <p class="mb-2 text-sm text-gray-800">Posted 3 days ago</p>
+  <p class="mb-2 text-sm text-gray-800">
+    <%= t '.posted_at', count: posted_at_count(job) %>
+  </p>
   <div class="flex">
     <% if false %>
       <span class="tag mr-2">
