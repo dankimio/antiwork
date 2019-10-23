@@ -59,6 +59,9 @@ ru:
       new:
         heading: Вход и регистрация
         submit: Подтвердить
+    mailer:
+      subject: "Ссылка для входа"
+      magic_link: "Ссылка для входа: %{link}"
   sessions:
     create:
       title: Проверьте почту
