@@ -13,4 +13,5 @@ class Job < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
+  validates :salary_min, presence: true
 end

@@ -34,6 +34,10 @@ en:
         lead: Lead / Director
         middle: Mid-level
         senior: Senior
+  helpers:
+    jobs:
+      salary_range:
+        from: from %{value}
   companies:
     edit:
       email_help: Your primary email for logins and notifications, no spam

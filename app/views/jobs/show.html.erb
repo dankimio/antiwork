@@ -18,9 +18,7 @@
 
   <div class="mb-5">
     <p class="mb-2 text-gray-700">
-      <%= number_to_currency @job.salary_min %>
-      –
-      <%= number_to_currency @job.salary_max %>
+      <%= salary_range(@job) %>
       <span class="text-gray-500">|</span>
       <%= Job.human_attribute_name("employment_type.#{@job.employment_type}") %>
     </p>

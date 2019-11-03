@@ -34,6 +34,10 @@ ru:
         lead: Lead
         middle: Middle
         senior: Senior
+  helpers:
+    jobs:
+      salary_range:
+        from: от %{value}
   companies:
     edit:
       email_help: Основной email для входа и уведомлений. Никакого спама.
