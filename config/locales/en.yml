@@ -34,20 +34,20 @@ en:
         lead: Lead / Director
         middle: Mid-level
         senior: Senior
-  helpers:
-    jobs:
-      salary_range:
-        from: from %{value}
   companies:
     edit:
       email_help: Your primary email for logins and notifications, no spam
       submit: Submit
       title: Company info
+  helpers:
+    jobs:
+      salary_range:
+        from: from %{value}
   jobs:
     index:
       banner:
-        heading: Post your job
         content: It's free. No payment required.
+        heading: Post your job
         link: Post a job
     new:
       description: Description

@@ -34,20 +34,20 @@ ru:
         lead: Lead
         middle: Middle
         senior: Senior
-  helpers:
-    jobs:
-      salary_range:
-        from: от %{value}
   companies:
     edit:
       email_help: Основной email для входа и уведомлений. Никакого спама.
       submit: Подтвердить
       title: Данные о компании
+  helpers:
+    jobs:
+      salary_range:
+        from: от %{value}
   jobs:
     index:
       banner:
-        heading: Опубликовать вакансию
         content: Бесплатная публикация объявления на 30 дней.
+        heading: Опубликовать вакансию
         link: Опубликовать
     new:
       description: Описание
@@ -69,7 +69,6 @@ ru:
         unit: "₽"
   passwordless:
     mailer:
-      # magic_link: 'Ссылка для входа: %{link}'
       magic_link: 'Your login link: %{link}'
       subject: Ссылка для входа
     sessions:
