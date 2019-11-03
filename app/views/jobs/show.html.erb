@@ -53,17 +53,19 @@
   </div>
 
   <article class="text-gray-900 mb-4">
-    <p class="mb-6">
+    <p class="mb-4">
       <%= @job.description %>
     </p>
 
-    <h3 class="font-semibold mb-2 text-lg">
-      <%= t '.how_to_apply' %>
-    </h3>
+    <% if @job.how_to_apply.present? %>
+      <h3 class="font-semibold mb-2 text-lg">
+        <%= t '.how_to_apply' %>
+      </h3>
 
-    <p class="">
-      <%= @job.how_to_apply %>
-    </p>
+      <p class="">
+        <%= @job.how_to_apply %>
+      </p>
+    <% end %>
   </article>
 
   <p class="mb-2 text-sm text-gray-600 mb-6">
