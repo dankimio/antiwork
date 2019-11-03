@@ -44,11 +44,15 @@
 
 <div class="container container--unpadded max-w-lg mb-2 md:mb-4">
   <div class="py-5 px-6 bg-orange-100 text-gray-800">
-    <h3 class="heading-3 mb-2">Post your job</h3>
+    <h3 class="heading-3 mb-2">
+      <%= t '.banner.heading' %>
+    </h3>
 
-    <p class="mb-1">It's free. No payment required.</p>
+    <p class="mb-1">
+        <%= t '.banner.content' %>
+    </p>
 
-    <%= link_to 'Post a job', new_job_path, class: 'underlined underlined-black mb-1' %>
+    <%= link_to t('.banner.link'), new_job_path, class: 'underlined underlined-black mb-1' %>
   </div>
 </div>
 

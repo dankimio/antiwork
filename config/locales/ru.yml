@@ -40,6 +40,11 @@ ru:
       submit: Подтвердить
       title: Данные о компании
   jobs:
+    index:
+      banner:
+        heading: Опубликовать вакансию
+        content: Бесплатная публикация объявления на 30 дней.
+        link: Опубликовать
     new:
       description: Описание
       submit: Далее →

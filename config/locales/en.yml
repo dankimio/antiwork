@@ -40,6 +40,11 @@ en:
       submit: Submit
       title: Company info
   jobs:
+    index:
+      banner:
+        heading: Post your job
+        content: It's free. No payment required.
+        link: Post a job
     new:
       description: Description
       submit: Next →
