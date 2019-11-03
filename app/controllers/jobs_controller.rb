@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   before_action :require_company!, except: %i[index show]
 
   def index
-    @jobs = Job.includes(:company)
+    @jobs = Job.includes(:company).order(created_at: :desc)
     @jobs = @jobs.where(category: params[:category]) if params[:category].present?
   end
 
