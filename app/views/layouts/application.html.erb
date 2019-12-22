@@ -12,6 +12,7 @@
 
     <%= content_for :meta %>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_pack_tag 'application' %>
@@ -20,7 +21,7 @@
     <%= javascript_pack_tag 'hello_vue' %>
   </head>
 
-  <body>
+  <body class="font-sans">
     <%= render 'shared/header' %>
 
     <%= yield %>
