@@ -99,6 +99,16 @@ a.underlined-black {
   }
 }
 
+.field_with_errors {
+  & .field {
+    @apply border-red-300;
+
+    &:focus {
+      @apply border-red-400;
+    }
+  }
+}
+
 input[type=checkbox]:checked:after {
   @apply bg-gray-800 block w-full h-full border-4 border-white;
   content: "";
