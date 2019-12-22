@@ -43,6 +43,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  gem 'annotate', '~> 3.0'
   gem 'i18n-tasks'
 end
 
