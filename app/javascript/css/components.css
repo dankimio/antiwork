@@ -75,7 +75,7 @@ a.underlined-black {
 /* Buttons */
 
 .button {
-  @apply text-sm inline-flex items-center text-white bg-gray-800 py-2 px-5 uppercase tracking-wide font-semibold rounded-lg;
+  @apply text-sm inline-flex items-center text-white bg-gray-800 py-2 px-5 uppercase tracking-wider font-semibold rounded-lg;
 
   transition: all .25s;
 
