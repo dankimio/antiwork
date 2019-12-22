@@ -38,7 +38,7 @@
 /* Bar */
 
 .bar {
-  @apply w-12 h-1 bg-gray-800;
+  @apply w-12 h-1 bg-red-700;
 }
 
 /* Container */
