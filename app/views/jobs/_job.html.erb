@@ -1,13 +1,13 @@
 <div class="py-5">
   <div class="mb-2">
     <%= link_to job,
-                class: 'text-xl lg:text-2xl mr-1' do %>
+                class: 'text-xl lg:text-2xl mr-1 font-medium text-gray-900 hover:text-black' do %>
       <%= job.title %>
     <% end %>
     <span class="text-gray-600 lg:text-lg mr-1">
       <%= t 'views.at' %>
     </span>
-    <span class="text-lg lg:text-xl">
+    <span class="text-lg lg:text-xl text-gray-800">
       <%= job.company.name %>
     </span>
   </div>
