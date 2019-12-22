@@ -80,7 +80,7 @@ a.underlined-black {
   transition: all .25s;
 
   &:hover {
-    @apply bg-black .shadow-lg;
+    @apply bg-black shadow-lg cursor-pointer;
   }
 }
 
