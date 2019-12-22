@@ -126,7 +126,7 @@ select.custom-select {
 }
 
 .dropdown-list {
-  @apply z-10 absolute left-0 mt-2 w-64 bg-white py-2 shadow-lg border;
+  @apply z-10 absolute left-0 mt-2 w-64 bg-white py-2 shadow-lg border rounded;
 
   &.dropdown-list-xs {
     @apply w-32;
