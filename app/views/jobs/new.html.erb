@@ -16,9 +16,9 @@
                  placeholder: true, required: true, class: 'custom-select mb-4' %>
 
     <div class="mb-4 flex">
-      <%= f.number_field :salary_min, placeholder: true, required: true, class: 'flex-1 field' %>
+      <%= f.number_field :salary_min, placeholder: true, required: true, pattern: '\d*', class: 'flex-1 field' %>
       <div class="w-4"></div>
-      <%= f.number_field :salary_max, placeholder: true, class: 'flex-1 field' %>
+      <%= f.number_field :salary_max, placeholder: true, pattern: '\d*', class: 'flex-1 field' %>
     </div>
 
     <div class="flex items-center mb-8">
