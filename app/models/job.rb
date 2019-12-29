@@ -20,6 +20,7 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  employment_type  :integer          default("full_time")
+#  apply_url        :string
 #
 
 class Job < ApplicationRecord
@@ -35,7 +36,8 @@ class Job < ApplicationRecord
 
   belongs_to :company
 
-  validates :title, presence: true
+  validates :apply_url, presence: true
   validates :description, presence: true
   validates :salary_min, presence: true
+  validates :title, presence: true
 end
