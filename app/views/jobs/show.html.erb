@@ -22,6 +22,7 @@
       <span class="text-gray-500">|</span>
       <%= Job.human_attribute_name("employment_type.#{@job.employment_type}") %>
     </p>
+
     <div class="flex flex-wrap">
       <% if false %>
         <span class="tag mr-2">
@@ -50,17 +51,17 @@
     </div>
   </div>
 
-  <article class="text-gray-900 mb-4">
-    <p class="mb-4">
+  <article class="mb-4">
+    <p class="text-gray-800 mb-4 text-lg leading-relaxed">
       <%= @job.description %>
     </p>
 
     <% if @job.how_to_apply.present? %>
-      <h3 class="font-semibold mb-2 text-lg">
+      <h3 class="mt-5 text-gray-900 font-semibold mb-2 text-lg">
         <%= t '.how_to_apply' %>
       </h3>
 
-      <p class="">
+      <p class="text-gray-800 text-lg leading-relaxed">
         <%= @job.how_to_apply %>
       </p>
     <% end %>
