@@ -50,6 +50,9 @@ en:
       salary_range:
         from: from %{value}
   jobs:
+    form:
+      description: Description
+      submit: Next →
     index:
       banner:
         content: It's free. No payment required.
@@ -58,8 +61,6 @@ en:
       title: Design jobs in Moscow
       title_with_category: "%{category} — Design mjobs in Moscow"
     new:
-      description: Description
-      submit: Next →
       title: New job
     show:
       apply_button: Apply

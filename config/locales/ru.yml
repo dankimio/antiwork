@@ -50,6 +50,9 @@ ru:
       salary_range:
         from: от %{value}
   jobs:
+    form:
+      description: Описание
+      submit: Далее →
     index:
       banner:
         content: Размести бесплатное объявление на 30 дней.
@@ -58,8 +61,6 @@ ru:
       title: Дизайн вакансии в Москве
       title_with_category: "%{category} — Дизайн вакансии в Москве"
     new:
-      description: Описание
-      submit: Далее →
       title: Новая вакансия
     show:
       apply_button: Откликнуться

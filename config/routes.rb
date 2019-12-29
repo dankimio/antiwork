@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   root 'jobs#index'
 
   resource :company, only: %i[edit update]
-  resources :jobs, only: %i[index show new create]
+  resources :jobs, except: %i[destroy]
 
   namespace :company do
-    resources :jobs, only: %i[index edit update]
+    resources :jobs, only: %i[index]
   end
 
   if false
