@@ -3,5 +3,6 @@
 
 @import 'custom';
 @import 'components';
+@import 'jobs';
 
 @import 'tailwindcss/utilities';

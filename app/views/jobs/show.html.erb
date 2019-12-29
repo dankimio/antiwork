@@ -1,6 +1,6 @@
 <%= content_for :title, 'Customer support manager' %>
 
-<div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
+<div id="job" class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
   <h1 class="heading-1 mb-1">
     <%= @job.title %>
   </h1>
@@ -52,18 +52,14 @@
   </div>
 
   <article class="mb-4">
-    <p class="text-gray-800 mb-4 text-lg leading-relaxed">
-      <%= @job.description %>
-    </p>
+    <%= Kramdown::Document.new(@job.description).to_html.html_safe %>
 
     <% if @job.how_to_apply.present? %>
-      <h3 class="mt-5 text-gray-900 font-semibold mb-2 text-lg">
+      <h3 class="mt-5 mb-2">
         <%= t '.how_to_apply' %>
       </h3>
 
-      <p class="text-gray-800 text-lg leading-relaxed">
-        <%= @job.how_to_apply %>
-      </p>
+      <%= Kramdown::Document.new(@job.how_to_apply).to_html.html_safe %>
     <% end %>
   </article>
 
