@@ -19,6 +19,10 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
 
     <%= javascript_pack_tag 'hello_vue' %>
+
+    <% if Rails.env.production? %>
+      <%= render 'shared/scripts' %>
+    <% end %>
   </head>
 
   <body class="font-sans">
