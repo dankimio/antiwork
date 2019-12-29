@@ -11,4 +11,9 @@ module ApplicationHelper
       base_title
     end
   end
+
+  def markdown(text = '')
+    html = Kramdown::Document.new(@job.description).to_html
+    sanitize html, tags: %w[a em h2 h3 h4 h5 h6 li p strong ul]
+  end
 end
