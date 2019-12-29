@@ -51,6 +51,9 @@ en:
       salary_range:
         from: from %{value}
   jobs:
+    edit:
+      heading: Edit job
+      title: Edit "%{job_title}"
     form:
       apply_url_help: URL or email — mailto:foo@bar.com
       description: Description

@@ -51,6 +51,9 @@ ru:
       salary_range:
         from: от %{value}
   jobs:
+    edit:
+      heading: Редактировать вакансию
+      title: Редактировать "%{job_title}"
     form:
       apply_url_help: URL или email в виде mailto:foo@bar.com
       description: Описание

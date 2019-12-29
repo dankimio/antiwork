@@ -1,8 +1,10 @@
-<%= content_for :title, @job.title %>
+<%= content_for :title,
+  t('.title', job_title: @job.title)
+%>
 
 <div class="px-4 lg:px-0 max-w-lg mx-auto mb-6">
   <h1 class="heading-1 mb-2">
-    <%= t @job.title %>
+    <%= t '.heading' %>
   </h1>
 
   <%= render 'jobs/form' %>
