@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resource :company, only: %i[edit update]
   resources :jobs, only: %i[index show new create]
 
-  get 'payment', to: 'pages#payment'
+  if false
+    get 'payment', to: 'pages#payment'
+  end
 end
