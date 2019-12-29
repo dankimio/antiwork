@@ -52,6 +52,7 @@ en:
         from: from %{value}
   jobs:
     form:
+      apply_url_help: URL or email — mailto:foo@bar.com
       description: Description
       submit: Next →
     index:
@@ -65,6 +66,7 @@ en:
       title: New job
     show:
       apply_button: Apply
+      archived: This job is archived. The position might be filled or be no longer relevant.
       how_to_apply: How to apply
   number:
     currency:

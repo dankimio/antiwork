@@ -52,7 +52,7 @@ ru:
         from: от %{value}
   jobs:
     form:
-      apply_url_help: 'URL или email в виде mailto:foo@bar.com'
+      apply_url_help: URL или email в виде mailto:foo@bar.com
       description: Описание
       submit: Далее →
     index:
@@ -66,6 +66,7 @@ ru:
       title: Новая вакансия
     show:
       apply_button: Откликнуться
+      archived: Вакансия в архиве. Позиция может быть закрыта.
       how_to_apply: Инструкция
   number:
     currency:
