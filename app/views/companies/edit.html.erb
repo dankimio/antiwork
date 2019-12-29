@@ -6,25 +6,29 @@
   <div class="bar mb-8"></div>
 
   <%= form_with model: @company, local: true do |f| %>
-
     <%= f.text_field :name,
-                     placeholder: true, required: true,
-                     class: 'field mb-4' %>
+      placeholder: true, required: true,
+      class: 'field mb-4'
+    %>
 
     <%= f.url_field :website,
-                    placeholder: true, required: true,
-                    class: 'field mb-4' %>
+      placeholder: true, required: true,
+      class: 'field mb-4'
+    %>
 
-    <%= f.text_field :logo,
-                     placeholder: true,
-                     class: 'field mb-4' %>
+    <% if false %>
+      <%= f.text_field :logo, placeholder: true, class: 'field mb-4' %>
+    <% end %>
 
-    <%= f.email_field :field,
-                      placeholder: 'Email', required: true,
-                      class: 'field mb-2' %>
-    <small class="block text-sm text-gray-600 mb-6">
-      <%= t '.email_help' %>
-    </small>
+    <% if false %>
+      <%= f.email_field :email,
+        placeholder: 'Email', required: true,
+        class: 'field mb-2'
+      %>
+      <small class="block text-sm text-gray-600 mb-6">
+        <%= t '.email_help' %>
+      </small>
+    <% end %>
 
     <%= f.submit t('.submit'), class: 'button' %>
   <% end %>
