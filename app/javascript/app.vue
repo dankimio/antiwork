@@ -10,7 +10,7 @@
 export default {
   data: function() {
     return {
-      message: '© 2019 Antiwork'
+      message: 'Made by Dan Kim.'
     }
   }
 }
