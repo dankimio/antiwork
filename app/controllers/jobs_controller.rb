@@ -46,8 +46,8 @@ class JobsController < ApplicationController
     params
       .require(:job)
       .permit(
-        :title, :category, :salary_min, :salary_max, :remote, :visa_sponsorship,
-        :city, :country, :level, :description, :how_to_apply
+        :apply_url, :category, :city, :country, :description, :how_to_apply,
+        :level, :remote, :salary_max, :salary_min, :title, :visa_sponsorship
       )
   end
 end

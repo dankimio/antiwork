@@ -7,6 +7,7 @@ ru:
         name: Название
         website: Сайт
       job:
+        apply_url: Ссылка для отклика
         category: Категория
         city: Город
         country: Страна
@@ -51,6 +52,7 @@ ru:
         from: от %{value}
   jobs:
     form:
+      apply_url_help: 'URL или email в виде mailto:foo@bar.com'
       description: Описание
       submit: Далее →
     index:
