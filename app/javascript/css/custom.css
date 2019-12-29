@@ -1,5 +1,18 @@
+/* Reset inputs */
+
 input, textarea {
   border-radius: 0;
   outline: none;
   -webkit-appearance: none;
+}
+
+/* Number fields */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
