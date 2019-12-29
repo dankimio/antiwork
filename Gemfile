@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Utilities
+gem 'kramdown', '~> 2.1'
 gem 'lockup', '~> 1.5'
 
 # Auth
