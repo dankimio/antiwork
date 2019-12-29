@@ -92,6 +92,7 @@ ru:
       sign_in_link: Вход
       sign_out_link: Выйти
     header:
+      my_jobs: Мои вакансии
       post_button: Опубликовать
   views:
     at: в

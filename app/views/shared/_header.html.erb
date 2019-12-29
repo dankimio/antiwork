@@ -1,5 +1,5 @@
 <div class="container mx-auto flex flex-col sm:flex-row justify-between sm:items-center py-6 mb-2 md:mb-4 lg:mb-8">
-  <a href="/" class="mb-6 sm:mb-0 flex items-center">
+  <a href="/" class="mb-4 sm:mb-0 flex items-center">
     <%= image_tag 'moscow.svg', class: 'injectable inline-block w-10 h-10 mr-3 lg:w-12 lg:h-12' %>
     <span class="text-2xl lg:text-3xl mr-2">дизайн</span>
     <div class="text-xl lg:text-2xl mr-1 text-white bg-red-700 rounded px-2 font-medium">
@@ -10,7 +10,14 @@
     <% end %>
   </a>
 
-  <a href="/jobs/new" class="button">
-    <%= t '.post_button' %>
-  </a>
+  <div class="flex flex-col sm:flex-row sm:items-center">
+    <% if current_company.jobs.count.positive? %>
+      <a href="/jobs/new" class="text-gray-900 hover:text-gray-700 mb-3 sm:mb-0 sm:mr-5 md:mr-6">
+        <%= t '.my_jobs' %>
+      </a>
+    <% end %>
+    <a href="/jobs/new" class="button">
+      <%= t '.post_button' %>
+    </a>
+  </div>
 </div>
