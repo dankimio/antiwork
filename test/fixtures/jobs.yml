@@ -24,17 +24,18 @@
 #
 
 job:
-  company: company
-  title: MyString
+  apply_url: "https://google.com"
   category: 1
-  salary_min: 1
-  salary_max: 1
-  remote: false
-  visa_sponsorship: false
   city: MyString
+  company: company
   country: MyString
-  level: 1
   description: MyText
   how_to_apply: MyText
+  level: 1
   paid: false
   published_at: 2019-09-07 20:30:14
+  remote: false
+  salary_max: 1
+  salary_min: 1
+  title: MyString
+  visa_sponsorship: false

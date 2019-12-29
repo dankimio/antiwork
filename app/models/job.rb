@@ -40,7 +40,10 @@ class Job < ApplicationRecord
 
   validates :apply_url, presence: true
   validates :description, presence: true
-  validates :salary_min, presence: true
+  validates :salary_min, presence: true, numericality: { greater_than: 0 }
+  validates :salary_max,
+            numericality: { greater_than_or_equal_to: :salary_min },
+            allow_blank: true, if: :salary_min?
   validates :title, presence: true
 
   # TODO: use published_at attribute
