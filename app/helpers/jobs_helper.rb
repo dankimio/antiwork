@@ -16,4 +16,8 @@ module JobsHelper
     # $50 000–$100 000
     "#{number_to_currency job.salary_min} – #{number_to_currency job.salary_max}"
   end
+
+  def job_meta_description(job, limit: 150)
+    raw_markdown(job.description).truncate(limit).squish
+  end
 end
