@@ -20,6 +20,12 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ]
+    },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
     }
   },
   variants: {},
