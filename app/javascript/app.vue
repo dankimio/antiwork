@@ -10,7 +10,7 @@
 export default {
   data: function() {
     return {
-      message: 'Made by Dan Kim.'
+      message: ''
     }
   }
 }
