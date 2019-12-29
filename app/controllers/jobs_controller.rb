@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :require_company!, except: %i[index show]
+  before_action :set_current_company_job, only: %i[edit update]
 
   def index
     @jobs = Job.includes(:company).order(created_at: :desc)
@@ -25,10 +26,21 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = current_company.jobs.find(params[:id])
+  end
+
+  def update
+    if @job.update(job_params)
+      redirect_to company_jobs_url
+    else
+      render :edit
+    end
   end
 
   private
+
+  def set_current_company_job
+    @job = current_company.jobs.find(params[:id])
+  end
 
   def job_params
     params
