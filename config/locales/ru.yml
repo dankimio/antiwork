@@ -45,12 +45,12 @@ ru:
         from: от %{value}
   jobs:
     index:
-      title: Дизайн вакансии в Москве
-      title_with_category: "%{category} — Дизайн вакансии в Москве"
       banner:
         content: Размести бесплатное объявление на 30 дней.
         heading: Ищешь дизайнера?
         link: Опубликовать
+      title: Дизайн вакансии в Москве
+      title_with_category: "%{category} — Дизайн вакансии в Москве"
     new:
       description: Описание
       submit: Далее →
@@ -88,8 +88,8 @@ ru:
       title: Вход
   shared:
     footer:
-      sign_in_link_descriptor: в личный кабинет
       sign_in_link: Вход
+      sign_in_link_descriptor: в личный кабинет
       sign_out_link: Выйти
     header:
       my_jobs: Мои вакансии

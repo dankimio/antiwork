@@ -49,6 +49,8 @@ en:
         content: It's free. No payment required.
         heading: Post your job
         link: Post a job
+      title: 'Design jobs in Moscow'
+      title_with_category: '%{category} — Design mjobs in Moscow'
     new:
       description: Description
       submit: Next →
@@ -86,10 +88,11 @@ en:
       title: Sign in
   shared:
     footer:
-      sign_in_link_descriptor: for existing users
       sign_in_link: Sign in
+      sign_in_link_descriptor: for existing users
       sign_out_link: Sign out
     header:
+      my_jobs: 'My jobs'
       post_button: Post a job
   views:
     at: at
