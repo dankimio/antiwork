@@ -12,9 +12,9 @@
 
   <div class="flex flex-col sm:flex-row sm:items-center">
     <% if current_company.jobs.count.positive? %>
-      <a href="/jobs/new" class="text-gray-900 hover:text-gray-700 mb-3 sm:mb-0 sm:mr-5 md:mr-6">
-        <%= t '.my_jobs' %>
-      </a>
+      <%= link_to t('.my_jobs'),
+        company_jobs_path,
+        class: 'text-gray-900 hover:text-gray-700 mb-3 sm:mb-0 sm:mr-5 md:mr-6' %>
     <% end %>
     <a href="/jobs/new" class="button">
       <%= t '.post_button' %>

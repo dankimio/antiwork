@@ -1,0 +1,9 @@
+<div class="container px-6 max-w-xl mb-6">
+  <h1 class="heading-1 mb-2">
+    <%= t '.title' %>
+  </h1>
+
+  <div class="bar mb-4"></div>
+
+  <%= render partial: 'company/jobs/job', collection: @jobs, as: :job, cached: true %>
+</div>

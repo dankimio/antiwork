@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resource :company, only: %i[edit update]
   resources :jobs, only: %i[index show new create]
 
+  namespace :company do
+    resources :jobs, only: %i[index edit update]
+  end
+
   if false
     get 'payment', to: 'pages#payment'
   end

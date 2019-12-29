@@ -39,6 +39,12 @@ ru:
       email_help: Основной email для входа и уведомлений. Никакого спама.
       submit: Подтвердить
       title: Данные о компании
+  company:
+    jobs:
+      index:
+        title: Мои вакансии
+      job:
+        edit_link: Редактировать
   helpers:
     jobs:
       salary_range:
