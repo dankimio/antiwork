@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :set_current_company_job, only: %i[edit update]
 
   def index
-    @jobs = Job.includes(:company).order(created_at: :desc)
+    @jobs = Job.includes(:company).order(created_at: :desc).active
     @jobs = @jobs.where(category: params[:category]) if params[:category].present?
   end
 

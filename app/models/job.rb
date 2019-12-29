@@ -24,6 +24,8 @@
 #
 
 class Job < ApplicationRecord
+  EXPIRY_DAYS = 30.days
+
   enum category: %i[
     ui graphic motion illustration branding other
   ]
@@ -40,4 +42,7 @@ class Job < ApplicationRecord
   validates :description, presence: true
   validates :salary_min, presence: true
   validates :title, presence: true
+
+  # TODO: use published_at attribute
+  scope :active, -> { where('created_at > ?', Time.zone.now - EXPIRY_DAYS) }
 end
