@@ -45,6 +45,8 @@ ru:
         from: от %{value}
   jobs:
     index:
+      title: Дизайн вакансии в Москве
+      title_with_category: "%{category} — Дизайн вакансии в Москве"
       banner:
         content: Размести бесплатное объявление на 30 дней.
         heading: Ищешь дизайнера?
