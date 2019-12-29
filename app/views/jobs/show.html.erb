@@ -67,7 +67,8 @@
     <%= t 'views.posted_at', count: posted_at_count(@job) %>
   </p>
 
-  <a href="#" class="button">
-    <%= t '.apply_button' %>
-  </a>
+  <%= link_to t('.apply_button'),
+    @job.apply_url, target: :_blank,
+    class: 'button'
+  %>
 </div>
