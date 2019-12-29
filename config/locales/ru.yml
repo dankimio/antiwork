@@ -86,7 +86,7 @@ ru:
       title: Вход
   shared:
     footer:
-      for_existing_users: для зарегистрированных пользователей
+      sign_in_link_descriptor: в личный кабинет
       sign_in_link: Вход
       sign_out_link: Выйти
     header:

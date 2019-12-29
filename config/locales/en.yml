@@ -86,7 +86,7 @@ en:
       title: Sign in
   shared:
     footer:
-      for_existing_users: for existing users
+      sign_in_link_descriptor: for existing users
       sign_in_link: Sign in
       sign_out_link: Sign out
     header:
