@@ -46,10 +46,13 @@ class Job < ApplicationRecord
             allow_blank: true, if: :salary_min?
   validates :title, presence: true
 
-  # TODO: use published_at attribute
-  scope :active, -> { where('created_at > ?', Time.zone.now - EXPIRY_DAYS) }
+  scope :active, -> { where('published_at > ?', Time.zone.now - EXPIRY_DAYS) }
 
   def active?
     created_at > Time.zone.now - EXPIRY_DAYS
+  end
+
+  def publish
+    touch(:published_at)
   end
 end

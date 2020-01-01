@@ -20,6 +20,7 @@ class JobsController < ApplicationController
     @job = current_company.jobs.build(job_params)
 
     if @job.save
+      @job.publish
       redirect_to edit_company_url
     else
       render :new
