@@ -9,9 +9,11 @@
     <% email_field_name = :"passwordless[#{@email_field}]" %>
 
     <%= email_field_tag email_field_name,
-                        params.fetch(email_field_name, nil),
-                        placeholder: 'email@example.com', required: true,
-                        class: 'field mb-1' %>
+      params.fetch(email_field_name, nil),
+      placeholder: 'email@example.com', required: true,
+      autofocus: true,
+      class: 'field mb-1'
+    %>
 
     <small class="block text-sm text-gray-600 mb-4">
       <%= t '.email_help' %>
