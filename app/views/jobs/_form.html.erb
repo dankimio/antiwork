@@ -26,6 +26,12 @@
     %>
   </div>
 
+  <%= f.select :employment_type,
+    Job.employment_types.keys.map { |key| [Job.human_attribute_name("employment_type.#{key}"), key] },
+    { prompt: Job.human_attribute_name('employment_type') },
+    placeholder: true, required: true, class: 'custom-select mb-4'
+  %>
+
   <div class="flex items-center mb-8">
     <%= f.check_box :remote, class: 'w-6 h-6 border-2 mr-2' %>
 

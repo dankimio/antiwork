@@ -12,6 +12,7 @@ ru:
         city: Город
         country: Страна
         description: Описание
+        employment_type: Тип занятости
         how_to_apply: Инструкция
         level: Уровень
         remote: Удалёнка

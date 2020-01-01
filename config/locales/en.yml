@@ -12,6 +12,7 @@ en:
         city: City
         country: Country
         description: Description
+        employment_type: Employment type
         how_to_apply: How to apply
         level: Level
         remote: Remote
@@ -63,6 +64,7 @@ en:
         content: It's free. No payment required.
         heading: Post your job
         link: Post a job
+      meta_description: Design jobs in Moscow
       title: Design jobs in Moscow
       title_with_category: "%{category} — Design mjobs in Moscow"
     new:

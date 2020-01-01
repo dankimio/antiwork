@@ -12,7 +12,8 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = current_company.jobs.build
+    # Let the user choose employment type (full-time by default on database level)
+    @job = current_company.jobs.build(employment_type: nil)
   end
 
   def create
@@ -46,8 +47,9 @@ class JobsController < ApplicationController
     params
       .require(:job)
       .permit(
-        :apply_url, :category, :city, :country, :description, :how_to_apply,
-        :level, :remote, :salary_max, :salary_min, :title, :visa_sponsorship
+        :apply_url, :category, :city, :country, :description, :employment_type,
+        :how_to_apply, :level, :remote, :salary_max, :salary_min, :title,
+        :visa_sponsorship
       )
   end
 end
