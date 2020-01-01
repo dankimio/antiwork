@@ -63,7 +63,7 @@
   <%= f.select :level,
     Job.levels.keys.map { |key| [Job.human_attribute_name("level.#{key}"), key] },
     { prompt: Job.human_attribute_name('level') },
-    placeholder: true, required: true, class: 'custom-select mb-4'
+    placeholder: true, class: 'custom-select mb-4'
   %>
 
   <% if false %>
