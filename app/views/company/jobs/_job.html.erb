@@ -8,7 +8,11 @@
       <% end %>
     </div>
     <p class="text-sm text-gray-800">
-      <%= t 'views.posted_at', count: posted_at_count(job) %>
+      <% if job.published_at.present? %>
+        <%= t 'views.published_at', count: published_at_count(job) %>
+      <% else %>
+        <%= 'Не опубликовано' %>
+      <% end %>
     </p>
   </div>
   <div>

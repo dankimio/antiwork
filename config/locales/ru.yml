@@ -111,7 +111,7 @@ ru:
       post_button: Опубликовать
   views:
     at: в
-    posted_at:
+    published_at:
       few: Опубликовано %{count} дня назад
       many: Опубликовано %{count} дней назад
       one: Опубликовано %{count} день назад

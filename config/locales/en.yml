@@ -111,7 +111,7 @@ en:
       post_button: Post a job
   views:
     at: at
-    posted_at:
+    published_at:
       one: Posted %{count} day ago
       other: Posted %{count} days ago
       zero: Posted today
