@@ -16,9 +16,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= url_for(only_path: false) %>">
     <meta property="og:title" content="<%= title content_for(:title) %>">
-    <meta property="og:description" content="<%= meta_description content_for(:meta_description) %>">
+    <meta property="og:description" content="<%= meta_description content_for(:meta_description), limit: 200 %>">
     <meta property="og:site_name" content="<%= Rails.application.config.hostname %>">
     <meta property="og:locale" content="<%= I18n.locale %>_RU">
+
+    <meta name="twitter:card" content="summary">
+    <% if false %>
+      <meta name="twitter:site" content="@site_account">
+    <% end %>
+    <meta name="twitter:creator" content="@dankimio">
+    <meta name="twitter:url" content="<%= url_for(only_path: false) %>">
+    <meta name="twitter:title" content="<%= title content_for(:title) %>">
+    <meta name="twitter:description" content="<%= meta_description content_for(:meta_description), limit: 200 %>">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all' %>
