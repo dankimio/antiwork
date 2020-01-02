@@ -14,7 +14,7 @@
     <%= content_for :meta %>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<%= url_for(only_path: false) %>">
+    <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= title content_for(:title) %>">
     <meta property="og:description" content="<%= meta_description content_for(:meta_description), limit: 200 %>">
     <meta property="og:site_name" content="<%= Rails.application.config.hostname %>">
@@ -25,7 +25,7 @@
       <meta name="twitter:site" content="@site_account">
     <% end %>
     <meta name="twitter:creator" content="@dankimio">
-    <meta name="twitter:url" content="<%= url_for(only_path: false) %>">
+    <meta name="twitter:url" content="<%= request.original_url %>">
     <meta name="twitter:title" content="<%= title content_for(:title) %>">
     <meta name="twitter:description" content="<%= meta_description content_for(:meta_description), limit: 200 %>">
 
