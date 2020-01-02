@@ -21,7 +21,7 @@ class JobsController < ApplicationController
 
     if @job.save
       @job.publish
-      redirect_to edit_company_url
+      redirect_to edit_company_url, flash: { success: t('.flash_success') }
     else
       render :new
     end

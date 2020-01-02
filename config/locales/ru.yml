@@ -52,6 +52,8 @@ ru:
       salary_range:
         from: от %{value}
   jobs:
+    create:
+      flash_success: Вакансия успешно опубликована! Проверьте данные компании.
     edit:
       heading: Редактировать вакансию
       title: Редактировать "%{job_title}"

@@ -52,6 +52,8 @@ en:
       salary_range:
         from: from %{value}
   jobs:
+    create:
+      flash_success: Your job was published! Please fill in company info.
     edit:
       heading: Edit job
       title: Edit "%{job_title}"
