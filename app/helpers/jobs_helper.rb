@@ -1,4 +1,6 @@
 module JobsHelper
+  JOB_PAGE_ALLOWED_MARKDOWN_TAGS = %w[a em h2 h3 h4 h5 h6 li p strong ul].freeze
+
   def published_at_count(job)
     return 0 if job.published_at.to_date >= Date.current
 
@@ -18,6 +20,10 @@ module JobsHelper
   end
 
   def job_meta_description(job)
-    raw_markdown(job.description).squish
+    markdown(job.description, sanitize_tags: []).squish
+  end
+
+  def job_page_markdown(text = '')
+    markdown(text, sanitize_tags: JOB_PAGE_ALLOWED_MARKDOWN_TAGS)
   end
 end

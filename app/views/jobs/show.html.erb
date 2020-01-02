@@ -61,14 +61,14 @@
   </div>
 
   <article class="mb-4">
-    <%= markdown @job.description %>
+    <%= job_page_markdown @job.description %>
 
     <% if @job.how_to_apply.present? %>
       <h2 class="mt-5">
         <%= t '.how_to_apply' %>
       </h2>
 
-      <%= markdown @job.how_to_apply %>
+      <%= job_page_markdown @job.how_to_apply %>
     <% end %>
   </article>
 
