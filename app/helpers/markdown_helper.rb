@@ -6,7 +6,7 @@ module MarkdownHelper
     html = Kramdown::Document.new(text).to_html
 
     if sanitize_tags
-      sanitize html, tags: sanitize_tags
+      sanitize(html, tags: sanitize_tags)
     else
       html
     end
