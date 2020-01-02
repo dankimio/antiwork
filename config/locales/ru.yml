@@ -114,6 +114,8 @@ ru:
       post_button: Опубликовать
   views:
     at: в
+    flash:
+      require_sign_in: Вам необходимо войти или зарегистрироваться
     published_at:
       few: Опубликовано %{count} дня назад
       many: Опубликовано %{count} дней назад

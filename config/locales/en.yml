@@ -114,6 +114,8 @@ en:
       post_button: Post a job
   views:
     at: at
+    flash:
+      require_sign_in: Please log in first
     published_at:
       one: Posted %{count} day ago
       other: Posted %{count} days ago

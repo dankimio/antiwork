@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
     return if current_company
 
     save_passwordless_redirect_location!(Company)
-    redirect_to companies.sign_in_path, flash: { error: 'Please log in first.' }
+    redirect_to companies.sign_in_path, notice: t('views.flash.require_sign_in')
   end
 end
