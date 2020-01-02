@@ -14,7 +14,7 @@ class TelegramChannelService
       text: format_job
     }
 
-    response = HTTParty.get(
+    HTTParty.get(
       "https://api.telegram.org/bot#{TELEGRAM_TOKEN}/sendMessage",
       query: options
     )
@@ -33,9 +33,9 @@ class TelegramChannelService
     end
     html.css('h2, h3, h4, h5, h6').each { |node| node.name = 'strong' }
 
-    result = ActionController::Base.helpers.sanitize(
-      html.to_html,
-      tags: %w[a em li strong]
-    ).squeeze(' ').gsub("\n\n\n", "\n\n")
+    ActionController::Base.helpers.sanitize(html.to_html, tags: %w[a em li strong])
+      .squeeze(' ') # Remove extra spaces
+      .gsub(/\n[ \t]+/, "\n") # Remove whitespace at line start
+      .gsub(/\n{3,}/, "\n\n") # Remove double+ newlines
   end
 end
