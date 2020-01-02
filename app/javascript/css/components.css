@@ -40,11 +40,14 @@
 .alert {
   @apply py-4 px-5 border text-gray-800 rounded;
 
-  &.alert--yellow {
-    @apply bg-yellow-100 border-yellow-300;
+  &.alert--success {
+    @apply bg-green-100 border-green-300;
   }
-  &.alert--red {
+  &.alert--error {
     @apply bg-red-100 border-red-300;
+  }
+  &.alert--warning {
+    @apply bg-yellow-100 border-yellow-300;
   }
 }
 
