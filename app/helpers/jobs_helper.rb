@@ -1,5 +1,6 @@
 module JobsHelper
   JOB_PAGE_ALLOWED_MARKDOWN_TAGS = %w[a em h2 h3 h4 h5 h6 li p strong ul].freeze
+  STRUCTURED_DATA_ALLOWED_MARKDOWN_TAGS = %w[p ul li].freeze
 
   def published_at_count(job)
     return 0 if job.published_at.to_date >= Date.current

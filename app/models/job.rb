@@ -49,7 +49,11 @@ class Job < ApplicationRecord
   scope :active, -> { where('published_at > ?', Time.zone.now - EXPIRY_DAYS) }
 
   def active?
-    created_at > Time.zone.now - EXPIRY_DAYS
+    published_at > Time.zone.now - EXPIRY_DAYS
+  end
+
+  def expires_at
+    published_at + EXPIRY_DAYS
   end
 
   def publish

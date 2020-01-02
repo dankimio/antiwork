@@ -81,3 +81,50 @@
     class: 'button'
   %>
 </div>
+
+<script type="application/ld+json">
+<%=
+  employment_type = {
+    'full_time' => 'FULL_TIME',
+    'part_time' => 'PART_TIME',
+    'contract' => 'CONTRACT'
+  }
+
+  result = {
+    '@context' => 'https://schema.org/',
+    '@type' => 'JobPosting',
+    'title' => @job.title,
+    'description' => markdown(@job.description, sanitize_tags: JobsHelper::STRUCTURED_DATA_ALLOWED_MARKDOWN_TAGS),
+    'datePosted' => @job.published_at.to_date.to_s,
+    'validThrough' => @job.expires_at.to_date.to_s,
+    'employmentType' => employment_type[@job.employment_type],
+    'hiringOrganization' => {
+      '@type' => 'Organization',
+      'name' => @job.company.name,
+      'sameAs' => @job.company.website
+      # 'logo' => 'http://www.example.com/images/logo.png'
+    },
+    'jobLocation' => {
+      '@type' => 'Place',
+      'address' => {
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Moscow',
+        'addressRegion' => 'Moscow',
+        'addressCountry' => 'RU'
+      }
+    },
+    'baseSalary' => {
+      '@type' => 'MonetaryAmount',
+      'currency' => 'RUB',
+      'value' => {
+        '@type' => 'QuantitativeValue',
+        'value' => @job.salary_min,
+        'unitText' => 'MONTH'
+      }
+    }
+  }
+
+  result['jobLocationType'] = 'TELECOMMUTE' if @job.remote?
+  result.to_json.html_safe
+%>
+</script>
