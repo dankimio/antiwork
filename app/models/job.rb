@@ -53,6 +53,7 @@ class Job < ApplicationRecord
   end
 
   def publish
+    TelegramChannelService.new(self).post
     touch(:published_at)
   end
 end
