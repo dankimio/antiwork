@@ -35,6 +35,19 @@
   }
 }
 
+/* Alerts */
+
+.alert {
+  @apply py-4 px-5 border text-gray-800 rounded;
+
+  &.alert--yellow {
+    @apply bg-yellow-100 border-yellow-300;
+  }
+  &.alert--red {
+    @apply bg-red-100 border-red-300;
+  }
+}
+
 /* Bar */
 
 .bar {
