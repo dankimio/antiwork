@@ -73,6 +73,8 @@ en:
       apply_button: Apply
       archived: This job is archived. The position might be filled or be no longer relevant.
       how_to_apply: How to apply
+    update:
+      flash_success: Вакансия успешно обновлена!
   layouts:
     application:
       meta_description: Design Jobs in Moscow

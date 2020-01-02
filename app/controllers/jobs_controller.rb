@@ -32,7 +32,7 @@ class JobsController < ApplicationController
 
   def update
     if @job.update(job_params)
-      redirect_to job_url(@job)
+      redirect_to job_url(@job), flash: { success: t('.flash_success') }
     else
       render :edit
     end
