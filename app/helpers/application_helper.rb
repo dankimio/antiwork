@@ -10,14 +10,14 @@ module ApplicationHelper
     end
   end
 
-  def meta_description(custom_description = nil)
+  def meta_description(custom_description = nil, limit: 150)
     page_description = custom_description ||
                        t("#{current_translation_path}.meta_description", default: '')
 
     if page_description.present?
-      page_description
+      page_description.truncate(limit)
     else
-      t('layouts.application.meta_description')
+      t('layouts.application.meta_description').truncate(limit)
     end
   end
 
