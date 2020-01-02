@@ -73,6 +73,9 @@ ru:
       apply_button: Откликнуться
       archived: Вакансия в архиве. Позиция может быть закрыта.
       how_to_apply: Инструкция
+  layouts:
+    application:
+      meta_description: Вакансии для дизайнеров в Москве
   number:
     currency:
       format:

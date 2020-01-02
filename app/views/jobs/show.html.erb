@@ -1,7 +1,5 @@
-<%= content_for :title, @job.title %>
-<% content_for :meta do %>
-  <%= tag.meta name: 'description', content: job_meta_description(@job) %>
-<% end %>
+<% content_for :title, @job.title %>
+<% content_for :meta_description, job_meta_description(@job) %>
 
 <div id="job" class="px-4 lg:px-0 max-w-xl mx-auto mb-6">
   <% unless @job.active? %>
