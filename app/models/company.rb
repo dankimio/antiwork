@@ -16,6 +16,7 @@ class Company < ApplicationRecord
 
   validates :email, presence: true
   validates :name, uniqueness: { case_sensitive: false }, allow_blank: true
+  validates :website, presence: true, on: :update
 
   before_save -> { email.downcase! }
 

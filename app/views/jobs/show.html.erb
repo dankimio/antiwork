@@ -18,9 +18,12 @@
     <span class="font-normal text-gray-600">
       <%= t 'views.at' %>
     </span>
-    <strong class="font-semibold text-gray-800">
+    <%= link_to @job.company.website,
+      target: :_blank,
+      class: 'font-semibold text-gray-800 hover:text-gray-600' do
+    %>
       <%= @job.company.name %>
-    </strong>
+    <% end %>
   </p>
 
   <div class="bar mb-4"></div>
