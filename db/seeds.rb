@@ -27,16 +27,17 @@ companies.each do |company_name|
   2.times do
     salary_min = (50..100).to_a.sample * 1000
     Job.create!(
-      title: titles.sample,
-      company: company,
+      apply_url: 'https://google.com',
       category: Job.categories.keys.sample,
-      salary_min: salary_min,
-      salary_max: salary_min * 2,
-      remote: [false, true].sample,
-      visa_sponsorship: [false, true].sample,
-      level: Job.levels.keys.sample,
+      company: company,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?',
-      how_to_apply: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?'
+      how_to_apply: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores praesentium unde accusamus. Delectus, esse quis, neque asperiores commodi placeat architecto veniam maiores ratione sed tempora tenetur dignissimos iusto voluptatibus?',
+      level: Job.levels.keys.sample,
+      remote: [false, true].sample,
+      salary_max: salary_min * 2,
+      salary_min: salary_min,
+      title: titles.sample,
+      visa_sponsorship: [false, true].sample
     )
   end
 end
