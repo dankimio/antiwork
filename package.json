@@ -5,11 +5,8 @@
     "@iconfu/svg-inject": "^1.2.3",
     "@rails/actioncable": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^4.0.7",
-    "tailwindcss": "^1.0.5",
-    "vue": "^2.6.10",
-    "vue-loader": "^15.7.1",
-    "vue-template-compiler": "^2.6.10"
+    "@rails/webpacker": "^5.0.0",
+    "tailwindcss": "^1.0.5"
   },
   "version": "0.1.0",
   "devDependencies": {
