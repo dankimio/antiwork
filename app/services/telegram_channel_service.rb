@@ -30,7 +30,7 @@ class TelegramChannelService
     # Replace `<li>Item</li>` with `– Item`
     html.css('li').each do |node|
       node.name = 'p'
-      node.inner_html = node.inner_html.prepend('– ')
+      node.inner_html.prepend('– ')
     end
     html.css('h1, h2, h3, h4, h5, h6').each { |node| node.name = 'strong' }
 

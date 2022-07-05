@@ -4,7 +4,7 @@ module ApplicationHelper
     base_title = Rails.application.config.hostname || 'anti.work'
 
     if page_title.present?
-      page_title + ' — ' + base_title
+      "#{page_title} — #{base_title}"
     else
       base_title
     end
