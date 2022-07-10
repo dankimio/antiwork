@@ -2,6 +2,8 @@
 
 This is a template app for a job board site built using Ruby on Rails.
 
+![Screenshot](./screenshot.png)
+
 ## Features
 
 - Passwordless login
