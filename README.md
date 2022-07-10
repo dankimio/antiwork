@@ -1,6 +1,6 @@
-# Job Board
+# antiwork
 
-This is a template app for a job board site built using Ruby on Rails.
+This is a template app for a job board site built with Ruby on Rails.
 
 ![Screenshot](./screenshot.png)
 
