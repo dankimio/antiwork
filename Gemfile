@@ -4,28 +4,28 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '~> 3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 6.1.7'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.2'
+gem 'pg', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Utilities
-gem 'kramdown', '~> 2.1'
-gem 'lockup', '~> 1.5'
-gem 'httparty', '~> 0.17'
+gem 'kramdown', '~> 2.4'
+gem 'lockup', '~> 1.7'
+gem 'httparty', '~> 0.20'
 
 # Auth
-gem 'passwordless', '~> 0.8'
+gem 'passwordless', '~> 0.11'
 
 # I18n
 gem 'rails-i18n', '~> 6.0'
